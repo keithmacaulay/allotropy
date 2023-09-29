@@ -1,6 +1,7 @@
 from collections.abc import Iterator
 from typing import Optional
 from uuid import uuid4
+from warnings import warn
 
 from allotropy.allotrope.models.pcr_benchling_2023_09_qpcr import ExperimentType
 from allotropy.parsers.appbio_quantstudio.appbio_quantstudio_structure import (
@@ -23,6 +24,11 @@ from allotropy.parsers.appbio_quantstudio.views import ViewData
 @cache
 def build_quantity(well_item: WellItem) -> Optional[CalculatedDocument]:
     if (quantity := well_item.result.quantity) is None:
+        warn(
+            f"Unable to find quantity value for well {well_item.identifier}",
+            category=RuntimeWarning,
+            stacklevel=1,
+        )
         return None
 
     return CalculatedDocument(
@@ -40,6 +46,11 @@ def build_quantity_mean(
 ) -> Optional[CalculatedDocument]:
     well_items = view_data.get_leaf_item(sample, target)
     if (quantity_mean := well_items[0].result.quantity_mean) is None:
+        warn(
+            f"Unable to find quantity mean value for well {well_items[0].identifier}",
+            category=RuntimeWarning,
+            stacklevel=1,
+        )
         return None
 
     return CalculatedDocument(
@@ -61,6 +72,11 @@ def build_quantity_sd(
 ) -> Optional[CalculatedDocument]:
     well_items = view_data.get_leaf_item(sample, target)
     if (quantity_sd := well_items[0].result.quantity_sd) is None:
+        warn(
+            f"Unable to find quantity sd value for well {well_items[0].identifier}",
+            category=RuntimeWarning,
+            stacklevel=1,
+        )
         return None
 
     return CalculatedDocument(
@@ -83,6 +99,11 @@ def build_ct_mean(
 ) -> Optional[CalculatedDocument]:
     well_items = view_data.get_leaf_item(sample, target)
     if (ct_mean := well_items[0].result.ct_mean) is None:
+        warn(
+            f"Unable to find ct mean value for well {well_items[0].identifier}",
+            category=RuntimeWarning,
+            stacklevel=1,
+        )
         return None
 
     return CalculatedDocument(
@@ -101,6 +122,11 @@ def build_ct_sd(
 ) -> Optional[CalculatedDocument]:
     well_items = view_data.get_leaf_item(sample, target)
     if (ct_sd := well_items[0].result.ct_sd) is None:
+        warn(
+            f"Unable to find ct sd value for well {well_items[0].identifier}",
+            category=RuntimeWarning,
+            stacklevel=1,
+        )
         return None
 
     return CalculatedDocument(
@@ -122,6 +148,11 @@ def build_delta_ct_mean(
 ) -> Optional[CalculatedDocument]:
     well_items = view_data.get_leaf_item(sample, target)
     if (delta_ct_mean := well_items[0].result.delta_ct_mean) is None:
+        warn(
+            f"Unable to find delta ct mean value for well {well_items[0].identifier}",
+            category=RuntimeWarning,
+            stacklevel=1,
+        )
         return None
 
     return CalculatedDocument(
@@ -146,6 +177,11 @@ def build_delta_ct_se(
 ) -> Optional[CalculatedDocument]:
     well_items = view_data.get_leaf_item(sample, target)
     if (delta_ct_se := well_items[0].result.delta_ct_se) is None:
+        warn(
+            f"Unable to find delta ct se value for well {well_items[0].identifier}",
+            category=RuntimeWarning,
+            stacklevel=1,
+        )
         return None
 
     source = [
@@ -174,6 +210,11 @@ def build_delta_delta_ct(
 ) -> Optional[CalculatedDocument]:
     well_items = view_data.get_leaf_item(sample, target)
     if (delta_delta_ct := well_items[0].result.delta_delta_ct) is None:
+        warn(
+            f"Unable to find delta delta ct value for well {well_items[0].identifier}",
+            category=RuntimeWarning,
+            stacklevel=1,
+        )
         return None
 
     return CalculatedDocument(
@@ -203,6 +244,11 @@ def build_rq(
 ) -> Optional[CalculatedDocument]:
     well_items = view_data.get_leaf_item(sample, target)
     if (rq := well_items[0].result.rq) is None:
+        warn(
+            f"Unable to find rq value for well {well_items[0].identifier}",
+            category=RuntimeWarning,
+            stacklevel=1,
+        )
         return None
 
     return CalculatedDocument(
@@ -229,6 +275,11 @@ def build_rq_min(
 ) -> Optional[CalculatedDocument]:
     well_items = view_data.get_leaf_item(sample, target)
     if (rq_min := well_items[0].result.rq_min) is None:
+        warn(
+            f"Unable to find rq min value for well {well_items[0].identifier}",
+            category=RuntimeWarning,
+            stacklevel=1,
+        )
         return None
 
     return CalculatedDocument(
@@ -253,6 +304,11 @@ def build_rq_max(
 ) -> Optional[CalculatedDocument]:
     well_items = view_data.get_leaf_item(sample, target)
     if (rq_max := well_items[0].result.rq_max) is None:
+        warn(
+            f"Unable to find rq max value for well {well_items[0].identifier}",
+            category=RuntimeWarning,
+            stacklevel=1,
+        )
         return None
 
     return CalculatedDocument(
@@ -276,6 +332,11 @@ def build_relative_rq(
 ) -> Optional[CalculatedDocument]:
     well_items = view_data.get_leaf_item(sample, target)
     if (rq := well_items[0].result.rq) is None:
+        warn(
+            f"Unable to find rq value for well {well_items[0].identifier}",
+            category=RuntimeWarning,
+            stacklevel=1,
+        )
         return None
 
     return CalculatedDocument(
@@ -298,6 +359,11 @@ def build_relative_rq_min(
 ) -> Optional[CalculatedDocument]:
     well_items = view_data.get_leaf_item(sample, target)
     if (rq_min := well_items[0].result.rq_min) is None:
+        warn(
+            f"Unable to find rq min value for well {well_items[0].identifier}",
+            category=RuntimeWarning,
+            stacklevel=1,
+        )
         return None
 
     return CalculatedDocument(
@@ -320,6 +386,11 @@ def build_relative_rq_max(
 ) -> Optional[CalculatedDocument]:
     well_items = view_data.get_leaf_item(sample, target)
     if (rq_max := well_items[0].result.rq_max) is None:
+        warn(
+            f"Unable to find rq max value for well {well_items[0].identifier}",
+            category=RuntimeWarning,
+            stacklevel=1,
+        )
         return None
 
     return CalculatedDocument(
@@ -340,6 +411,11 @@ def build_rn_mean(
 ) -> Optional[CalculatedDocument]:
     well_items = view_data.get_leaf_item(sample, target)
     if (rn_mean := well_items[0].result.rn_mean) is None:
+        warn(
+            f"Unable to find rn mean value for well {well_items[0].identifier}",
+            category=RuntimeWarning,
+            stacklevel=1,
+        )
         return None
 
     return CalculatedDocument(
@@ -358,6 +434,11 @@ def build_rn_sd(
 ) -> Optional[CalculatedDocument]:
     well_items = view_data.get_leaf_item(sample, target)
     if (rn_sd := well_items[0].result.rn_sd) is None:
+        warn(
+            f"Unable to find rn sd value for well {well_items[0].identifier}",
+            category=RuntimeWarning,
+            stacklevel=1,
+        )
         return None
 
     return CalculatedDocument(
@@ -376,6 +457,11 @@ def build_y_intercept(
 ) -> Optional[CalculatedDocument]:
     well_items = view_data.get_leaf_item(target)
     if (y_intercept := well_items[0].result.y_intercept) is None:
+        warn(
+            f"Unable to find y intercept value for well {well_items[0].identifier}",
+            category=RuntimeWarning,
+            stacklevel=1,
+        )
         return None
 
     return CalculatedDocument(
@@ -394,6 +480,11 @@ def build_r_squared(
 ) -> Optional[CalculatedDocument]:
     well_items = view_data.get_leaf_item(target)
     if (r_squared := well_items[0].result.r_squared) is None:
+        warn(
+            f"Unable to find r squared value for well {well_items[0].identifier}",
+            category=RuntimeWarning,
+            stacklevel=1,
+        )
         return None
 
     return CalculatedDocument(
@@ -412,6 +503,11 @@ def build_slope(
 ) -> Optional[CalculatedDocument]:
     well_items = view_data.get_leaf_item(target)
     if (slope := well_items[0].result.slope) is None:
+        warn(
+            f"Unable to find slope value for well {well_items[0].identifier}",
+            category=RuntimeWarning,
+            stacklevel=1,
+        )
         return None
 
     return CalculatedDocument(
@@ -430,6 +526,11 @@ def build_efficiency(
 ) -> Optional[CalculatedDocument]:
     well_items = view_data.get_leaf_item(target)
     if (efficiency := well_items[0].result.efficiency) is None:
+        warn(
+            f"Unable to find efficiency value for well {well_items[0].identifier}",
+            category=RuntimeWarning,
+            stacklevel=1,
+        )
         return None
 
     return CalculatedDocument(
