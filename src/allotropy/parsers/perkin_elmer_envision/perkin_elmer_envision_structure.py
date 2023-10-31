@@ -175,7 +175,7 @@ class PlateType:
         data = reader.pop_csv_block_as_df("^Plate type")
         data_df = assert_not_none(data, "Plate type").T
         return PlateType(
-            float(df_to_series(data_df).get("Number of the wells in the plate"))
+            float(str(df_to_series(data_df).get("Number of the wells in the plate")))
         )
 
 
