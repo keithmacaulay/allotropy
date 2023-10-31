@@ -167,7 +167,7 @@ class BasicAssayInfo:
 
 @dataclass
 class PlateType:
-    number_of_wells: Optional[float] = None
+    number_of_wells: float
 
     @staticmethod
     def create(reader: CsvReader) -> PlateType:
@@ -175,9 +175,7 @@ class PlateType:
         data = reader.pop_csv_block_as_df("^Plate type")
         data_df = assert_not_none(data, "Plate type").T
         return PlateType(
-            try_float(
-                str(df_to_series(data_df).get("Number of the wells in the plate"))
-            )
+            float(df_to_series(data_df).get("Number of the wells in the plate"))
         )
 
 
@@ -396,7 +394,7 @@ class Instrument:
 class Data:
     plates: list[Plate]
     basic_assay_info: BasicAssayInfo
-    number_of_wells: Optional[float]
+    number_of_wells: float
     plate_maps: dict[str, PlateMap]
     labels: Labels
     instrument: Instrument
