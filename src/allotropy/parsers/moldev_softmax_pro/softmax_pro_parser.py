@@ -8,9 +8,11 @@ from allotropy.parsers.vendor_parser import VendorParser
 
 class SoftmaxproParser(VendorParser):
     def _parse(self, contents: io.IOBase, filename: str) -> Any:  # noqa: ARG002
-        lines_reader = LinesReader(contents)
+        lines_reader = LinesReader(contents, encoding=None)
         data = Data.create(lines_reader)
         return self._get_model(data)
 
     def _get_model(self, data: Data) -> Any:
-        return data.get_plate_block().to_allotrope()
+        return data.get_plate_block().to_allotrope(
+            measurement_time=self.get_date_time(data.last_saved),
+        )

@@ -23,13 +23,26 @@ from allotropy.allotrope.models.luminescence_benchling_2023_09_luminescence impo
     MeasurementDocumentItem as MeasurementDocumentItemLuminescence,
     Model as ModelLuminescence,
 )
+from allotropy.allotrope.models.plate_reader_benchling_2023_09_plate_reader import (
+    CalculatedDataAggregateDocumentModel,
+    CalculatedDataDocumentItem1,
+    MeasurementAggregateDocument,
+    Model,
+    PlateReaderAggregateDocument,
+    PlateReaderDocumentItem,
+    SampleDocument,
+    UltravioletAbsorbancePointDetectionDeviceControlAggregateDocument,
+    UltravioletAbsorbancePointDetectionDeviceControlDocumentItem,
+    UltravioletAbsorbancePointDetectionMeasurementDocumentItems,
+)
 from allotropy.allotrope.models.shared.components.plate_reader import (
     ProcessedDataAggregateDocument,
     ProcessedDataDocumentItem,
-    SampleDocument,
+    SampleDocument as OldSampleDocument,
 )
 from allotropy.allotrope.models.shared.definitions.custom import (
     TQuantityValueDegreeCelsius,
+    TQuantityValueMilliAbsorbanceUnit,
     TQuantityValueNanometer,
     TQuantityValueNumber,
 )
@@ -39,13 +52,8 @@ from allotropy.allotrope.models.shared.definitions.definitions import (
     TDatacubeComponent,
     TDatacubeData,
     TDatacubeStructure,
-)
-from allotropy.allotrope.models.ultraviolet_absorbance_benchling_2023_09_ultraviolet_absorbance import (
-    DeviceControlAggregateDocument as DeviceControlAggregateDocumentAbsorbance,
-    DeviceControlDocumentItem as DeviceControlDocumentItemAbsorbance,
-    MeasurementAggregateDocument as MeasurementAggregateDocumentAbsorbance,
-    MeasurementDocumentItem as MeasurementDocumentItemAbsorbance,
-    Model as ModelAbsorbance,
+    TDateTimeValue,
+    TQuantityValue,
 )
 from allotropy.parsers.lines_reader import LinesReader
 from allotropy.parsers.utils.values import (
@@ -520,7 +528,17 @@ class PlateBlock(Block):
         return dimensions
 
     def generate_sample_document(self, well: str) -> SampleDocument:
-        return SampleDocument(well_location_identifier=well, plate_barcode=self.name)
+        return SampleDocument(
+            sample_identifier="NA",
+            location_identifier=well,
+            well_plate_identifier=self.name,
+        )
+
+    def generate_old_sample_document(self, well: str) -> OldSampleDocument:
+        return OldSampleDocument(
+            well_location_identifier=well,  # MISSING
+            plate_barcode=self.name,  # MISSING
+        )
 
     def generate_data_cube(self, well_data: WellData) -> TDatacube:
         dimension_data = [well_data.dimensions] + (
@@ -557,7 +575,24 @@ class PlateBlock(Block):
             ]
         )
 
-    def to_allotrope(self) -> Any:
+    def generate_calculated_data_aggregate_document(
+        self, well_data: WellData
+    ) -> CalculatedDataAggregateDocumentModel:
+        return CalculatedDataAggregateDocumentModel(
+            calculated_data_document=[
+                CalculatedDataDocumentItem1(
+                    calculated_data_name="",  # CHECK
+                    calculated_result=TQuantityValue(
+                        value=val,
+                        unit="unitless",  # CHECK
+                    ),
+                    calculation_description="processed data",
+                )
+                for val in well_data.processed_data
+            ]
+        )
+
+    def to_allotrope(self, measurement_time: TDateTimeValue) -> Any:
         raise NotImplementedError
 
 
@@ -633,13 +668,13 @@ class FluorescencePlateBlock(PlateBlock):
         )
 
     def generate_measurement_doc(
-        self, well: str, well_data: WellData
+        self, _: TDateTimeValue, well: str, well_data: WellData
     ) -> MeasurementDocumentItemFluorescence:
         return MeasurementDocumentItemFluorescence(
             device_control_aggregate_document=DeviceControlAggregateDocumentFluorescence(
                 device_control_document=[self.generate_device_control_doc()],
             ),
-            sample_document=self.generate_sample_document(well),
+            sample_document=self.generate_old_sample_document(well),
             compartment_temperature=(
                 TQuantityValueDegreeCelsius(float(well_data.temperature))
                 if well_data.temperature is not None
@@ -655,13 +690,15 @@ class FluorescencePlateBlock(PlateBlock):
             ),
         )
 
-    def to_allotrope(self) -> Any:
+    def to_allotrope(self, measurement_time: TDateTimeValue) -> Any:
         return ModelFluorescence(
             measurement_aggregate_document=MeasurementAggregateDocumentFluorescence(
                 measurement_identifier=str(uuid.uuid4()),
                 plate_well_count=TQuantityValueNumber(self.num_wells),
                 measurement_document=[
-                    self.generate_measurement_doc(well, self.well_data[well])
+                    self.generate_measurement_doc(
+                        measurement_time, well, self.well_data[well]
+                    )
                     for well in sorted(self.well_data.keys(), key=natural_sort_key)
                 ],
             )
@@ -715,7 +752,7 @@ class LuminescencePlateBlock(PlateBlock):
         )
 
     def generate_measurement_doc(
-        self, well: str, well_data: WellData
+        self, _: TDateTimeValue, well: str, well_data: WellData
     ) -> MeasurementDocumentItemLuminescence:
         return MeasurementDocumentItemLuminescence(
             device_control_aggregate_document=DeviceControlAggregateDocumentLuminescence(
@@ -723,7 +760,7 @@ class LuminescencePlateBlock(PlateBlock):
                     self.generate_device_control_doc(),
                 ]
             ),
-            sample_document=self.generate_sample_document(well),
+            sample_document=self.generate_old_sample_document(well),
             compartment_temperature=(
                 TQuantityValueDegreeCelsius(float(well_data.temperature))
                 if well_data.temperature is not None
@@ -739,13 +776,15 @@ class LuminescencePlateBlock(PlateBlock):
             ),
         )
 
-    def to_allotrope(self) -> Any:
+    def to_allotrope(self, measurement_time: TDateTimeValue) -> Any:
         return ModelLuminescence(
             measurement_aggregate_document=MeasurementAggregateDocumentLuminescence(
                 measurement_identifier=str(uuid.uuid4()),
                 plate_well_count=TQuantityValueNumber(self.num_wells),
                 measurement_document=[
-                    self.generate_measurement_doc(well, self.well_data[well])
+                    self.generate_measurement_doc(
+                        measurement_time, well, self.well_data[well]
+                    )
                     for well in sorted(self.well_data.keys(), key=natural_sort_key)
                 ],
             )
@@ -770,8 +809,11 @@ class AbsorbancePlateBlock(PlateBlock):
             cutoff_filters=None,
         )
 
-    def generate_device_control_doc(self) -> DeviceControlDocumentItemAbsorbance:
-        return DeviceControlDocumentItemAbsorbance(
+    def generate_device_control_doc(
+        self,
+    ) -> UltravioletAbsorbancePointDetectionDeviceControlDocumentItem:
+        return UltravioletAbsorbancePointDetectionDeviceControlDocumentItem(
+            device_type="absorbance detector",
             detector_gain_setting=self.pmt_gain,
             detector_wavelength_setting=(
                 TQuantityValueNanometer(self.wavelengths[0])
@@ -781,38 +823,57 @@ class AbsorbancePlateBlock(PlateBlock):
         )
 
     def generate_measurement_doc(
-        self, well: str, well_data: WellData
-    ) -> MeasurementDocumentItemAbsorbance:
-        return MeasurementDocumentItemAbsorbance(
-            device_control_aggregate_document=DeviceControlAggregateDocumentAbsorbance(
-                device_control_document=[self.generate_device_control_doc()],
+        self, measurement_time: TDateTimeValue, well: str, well_data: WellData
+    ) -> PlateReaderDocumentItem:
+        return PlateReaderDocumentItem(
+            measurement_aggregate_document=MeasurementAggregateDocument(
+                measurement_time=measurement_time,
+                plate_well_count=TQuantityValueNumber(self.num_wells),
+                measurement_document=[  # QUESTION: is always one element?
+                    UltravioletAbsorbancePointDetectionMeasurementDocumentItems(
+                        measurement_identifier=str(uuid.uuid4()),
+                        sample_document=self.generate_sample_document(well),
+                        device_control_aggregate_document=UltravioletAbsorbancePointDetectionDeviceControlAggregateDocument(
+                            device_control_document=[
+                                self.generate_device_control_doc(),
+                            ],
+                        ),
+                        absorbance=TQuantityValueMilliAbsorbanceUnit(
+                            value=(
+                                well_data.processed_data[0]
+                                if well_data.processed_data
+                                else 0  # CHECK
+                            ),
+                        ),
+                        compartment_temperature=(
+                            TQuantityValueDegreeCelsius(float(well_data.temperature))
+                            if well_data.temperature is not None
+                            else None
+                        ),
+                    ),
+                ],
+                calculated_data_aggregate_document=(
+                    self.generate_calculated_data_aggregate_document(well_data)
+                    if well_data.processed_data
+                    else None
+                ),
             ),
-            sample_document=self.generate_sample_document(well),
-            compartment_temperature=(
-                TQuantityValueDegreeCelsius(float(well_data.temperature))
-                if well_data.temperature is not None
-                else None
-            ),
-            data_cube=(
-                self.generate_data_cube(well_data) if not well_data.is_empty else None
-            ),
-            processed_data_aggregate_document=(
-                self.generate_processed_data_aggreate_document(well_data)
-                if well_data.processed_data
-                else None
-            ),
+            # data_cube=(
+            #     self.generate_data_cube(well_data) if not well_data.is_empty else None
+            # ),
         )
 
-    def to_allotrope(self) -> Any:
-        return ModelAbsorbance(
-            measurement_aggregate_document=MeasurementAggregateDocumentAbsorbance(
-                measurement_identifier=str(uuid.uuid4()),
-                plate_well_count=TQuantityValueNumber(self.num_wells),
-                measurement_document=[
-                    self.generate_measurement_doc(well, self.well_data[well])
+    def to_allotrope(self, measurement_time: TDateTimeValue) -> Any:
+        return Model(
+            field_asm_manifest="http://purl.allotrope.org/json-schemas/adm/plate-reader/BENCHLING/2023/09/plate-reader.schema",
+            plate_reader_aggregate_document=PlateReaderAggregateDocument(
+                plate_reader_document=[
+                    self.generate_measurement_doc(
+                        measurement_time, well, self.well_data[well]
+                    )
                     for well in sorted(self.well_data.keys(), key=natural_sort_key)
                 ],
-            )
+            ),
         )
 
 
@@ -847,6 +908,7 @@ class BlockList:
 @dataclass
 class Data:
     block_list: BlockList
+    last_saved: str
 
     def get_plate_block(self) -> PlateBlock:
         plate_blocks = [
@@ -863,4 +925,16 @@ class Data:
 
     @staticmethod
     def create(lines_reader: LinesReader) -> Data:
-        return Data(block_list=BlockList.create(lines_reader))
+        block_list = BlockList.create(lines_reader)
+
+        last_saved_search = re.search(
+            "Date Last Saved: (.*)$", lines_reader.pop() or ""
+        )
+        if last_saved_search is None:
+            msg = "Unable to extract date last saved"
+            raise AllotropeConversionError(msg)
+
+        return Data(
+            block_list=block_list,
+            last_saved=last_saved_search.group(1),
+        )
