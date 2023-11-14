@@ -214,7 +214,18 @@ class PlateBlock(Block):
             for raw_line in raw_lines
         ]
         header = split_lines[0]
-        read_mode = header[5]
+        [
+            _,  # Plate:
+            name,
+            export_version,
+            export_format,
+            read_type,
+            read_mode,
+        ] = header[:6]
+
+        if export_version != EXPORT_VERSION:
+            error = f"Invalid export version {export_version}"
+            raise AllotropeConversionError(error)
 
         plate_block_cls: dict[str, type[PlateBlock]] = {
             "Absorbance": AbsorbancePlateBlock,
@@ -223,26 +234,13 @@ class PlateBlock(Block):
         }
 
         if cls := plate_block_cls.get(read_mode or ""):
-            [
-                _,  # Plate:
-                name,
-                export_version,
-                export_format,
-                read_type,
-                _,  # Read mode
-            ] = header[:6]
-            if export_version != EXPORT_VERSION:
-                error = f"Invalid export version {export_version}"
-                raise AllotropeConversionError(error)
-
             data_type_idx = cls.get_data_type_idx()
-
             [
                 data_type,
                 _,  # Pre-read, always FALSE
                 kinetic_points_raw,
-                read_time_or_scan_pattern,
-                read_interval_or_scan_density,
+                _,  # read_time_or_scan_pattern
+                _,  # read_interval_or_scan_density
                 _,  # start_wavelength
                 _,  # end_wavelength
                 _,  # wavelength_step
