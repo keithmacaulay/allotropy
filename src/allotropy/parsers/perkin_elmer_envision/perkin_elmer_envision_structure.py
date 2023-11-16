@@ -157,9 +157,9 @@ class BasicAssayInfo:
 
     @staticmethod
     def create(reader: CsvReader) -> BasicAssayInfo:
-        reader.drop_until("^Basic assay information")
+        reader.drop_until_inclusive("^Basic assay information")
         data = assert_not_none(
-            reader.pop_csv_block_as_df("^Basic assay information"),
+            reader.pop_csv_block_as_df(),
             "Basic assay information",
         )
         data = data.T
@@ -177,9 +177,9 @@ class PlateType:
 
     @staticmethod
     def create(reader: CsvReader) -> PlateType:
-        reader.drop_until("^Plate type")
+        reader.drop_until_inclusive("^Plate type")
         data = assert_not_none(
-            reader.pop_csv_block_as_df("^Plate type"),
+            reader.pop_csv_block_as_df(),
             "Plate type",
         )
         return PlateType(
@@ -274,11 +274,9 @@ class PlateMap:
 
 def create_plate_maps(reader: CsvReader) -> dict[str, PlateMap]:
     assert_not_none(
-        reader.drop_until("^Platemap"),
+        reader.drop_until_inclusive("^Platemap"),
         msg="Unable to get plate map information",
     )
-
-    reader.pop()  # remove title
 
     maps: dict[str, PlateMap] = {}
     while _map := PlateMap.create(reader):
@@ -357,9 +355,9 @@ class Labels:
 
     @staticmethod
     def create(reader: CsvReader) -> Labels:
-        reader.drop_until("^Labels")
+        reader.drop_until_inclusive("^Labels")
         data = assert_not_none(
-            reader.pop_csv_block_as_df("^Labels"),
+            reader.pop_csv_block_as_df(),
             "Labels",
         )
         series = df_to_series(data.T).replace(np.nan, None)
@@ -398,11 +396,9 @@ class Instrument:
     @staticmethod
     def create(reader: CsvReader) -> Instrument:
         assert_not_none(
-            reader.drop_until("^Instrument"),
+            reader.drop_until_inclusive("^Instrument"),
             msg="Unable to find instrument information",
         )
-
-        reader.pop()  # remove title
 
         serial_number = assert_not_none(reader.pop(), "serial number").split(",")[-1]
         nickname = assert_not_none(reader.pop(), "nickname").split(",")[-1]
