@@ -54,8 +54,11 @@ class PlateInfo:
 
     @staticmethod
     def create(reader: CsvReader) -> Optional[PlateInfo]:
+        if reader.pop_if_match("^Plate information") is None:
+            return None
+
         data = assert_not_none(
-            reader.pop_csv_block_as_df("^Plate information"),
+            reader.pop_csv_block_as_df(),
             "Plate information CSV block",
         )
         series = df_to_series(data).replace(np.nan, None)
@@ -131,12 +134,11 @@ class Plate:
         plates: list[Plate] = []
 
         while True:
-            if not reader.match("^Plate information"):
-                break
-
             plate_info: Optional[PlateInfo] = None
             try:
                 plate_info = PlateInfo.create(reader)
+                if plate_info is None:
+                    break
             except Exception as e:
                 logging.warning(f"Failed to parse plate info with error: {e}")
 
