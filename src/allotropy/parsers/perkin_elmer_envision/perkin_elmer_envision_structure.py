@@ -17,7 +17,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass
-import logging
 from re import search
 from typing import Optional
 
@@ -83,8 +82,10 @@ class PlateInfo:
 
     @staticmethod
     def create(reader: CsvReader) -> Optional[PlateInfo]:
-        if reader.pop_if_match("^Plate information") is None:
-            return None
+        assert_not_none(
+            reader.pop_if_match("^Plate information"),
+            msg="Unable to find expected plate information",
+        )
 
         data = assert_not_none(
             reader.pop_csv_block_as_df(),
@@ -102,11 +103,15 @@ class PlateInfo:
         raw_barcode = raw_barcode.removeprefix('="').removesuffix('"')
         barcode = raw_barcode or f"Plate {plate_number}"
 
+        measinfo = str_from_series(series, "Measinfo")
+        if measinfo is None:
+            return None
+
         search_result = assert_not_none(
-            search("De=...", str_from_series(series, "Measinfo") or ""),
+            search("De=(...)", measinfo),
             msg=f"Unable to get emition filter id from plate {barcode}",
         )
-        emission_filter_id = search_result.group().removeprefix("De=")
+        emission_filter_id = search_result.group(1)
 
         return PlateInfo(
             plate_number,
@@ -162,23 +167,12 @@ class Plate:
     @staticmethod
     def create(reader: CsvReader) -> list[Plate]:
         plates: list[Plate] = []
-
-        while True:
-            plate_info: Optional[PlateInfo] = None
-            try:
-                plate_info = PlateInfo.create(reader)
-                if plate_info is None:
-                    break
-            except Exception as e:
-                logging.warning(f"Failed to parse plate info with error: {e}")
-
-            reader.drop_sections("^Background information|^Calculated results")
-
-            results = Result.create(reader)
-
-            if plate_info:
-                plates.append(Plate(plate_info, results=results))
-
+        while reader.match("^Plate information"):
+            if plate_info := PlateInfo.create(reader):
+                reader.drop_sections("^Background information|^Calculated results")
+                plates.append(Plate(plate_info, results=Result.create(reader)))
+            else:
+                reader.drop_until("^Plate information|^Basic assay information")
         return plates
 
 
