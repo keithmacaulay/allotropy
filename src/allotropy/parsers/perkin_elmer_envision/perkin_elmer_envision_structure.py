@@ -133,12 +133,17 @@ class CalculatedPlateInfo(PlateInfo):
 
 @dataclass
 class ResultPlateInfo(PlateInfo):
+    label: str
     emission_filter_id: str
 
     @staticmethod
     def create(series: pd.Series) -> Optional[ResultPlateInfo]:
         plate_number = PlateInfo.get_plate_number(series)
         barcode = PlateInfo.get_barcode(series, plate_number)
+
+        label = str_from_series(series, "Label")
+        if label is None:
+            return None
 
         measinfo = str_from_series(series, "Measinfo")
         if measinfo is None:
@@ -158,6 +163,7 @@ class ResultPlateInfo(PlateInfo):
                 series,
                 "Chamber temperature at start",
             ),
+            label=label,
             emission_filter_id=emission_id_search_result.group(1),
         )
 
