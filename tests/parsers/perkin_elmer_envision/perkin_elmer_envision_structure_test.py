@@ -9,6 +9,7 @@ from allotropy.allotrope.models.shared.components.plate_reader import SampleRole
 from allotropy.parsers.lines_reader import CsvReader
 from allotropy.parsers.perkin_elmer_envision.perkin_elmer_envision_structure import (
     BasicAssayInfo,
+    CalculatedResult,
     create_plate_maps,
     Filter,
     Instrument,
@@ -90,20 +91,6 @@ def test_create_result() -> None:
     ]
     assert Result.create(reader) == expected
 
-    # After no more results, return empty list.
-    assert Result.create(reader) == []
-
-
-def test_create_result_early_return() -> None:
-    reader = get_reader_from_lines(
-        [
-            "Plate information",
-            "1,2,,",
-            "3,4,,",
-        ]
-    )
-    assert Result.create(reader) == []
-
 
 def test_create_plates() -> None:
     reader = get_reader_from_lines(
@@ -113,9 +100,6 @@ def test_create_plates() -> None:
             "2,1,,1.1,14.5,De=2nd Ex=Top Em=Top Wdw=1 (14),0,10/13/2022 3:08:06 PM,",
             "",
             "Background information",
-            "junk",
-            "",
-            "Calculated results",
             "junk",
             "",
             "Results",
@@ -135,6 +119,7 @@ def test_create_plates() -> None:
                 measured_height=1.1,
                 chamber_temperature_at_start=14.5,
             ),
+            calculated_results=[],
             results=[
                 Result(col="A", row="01", value=6),
                 Result(col="A", row="03", value=7),
@@ -144,6 +129,41 @@ def test_create_plates() -> None:
     ]
 
     assert Plate.create(reader) == expected
+
+    reader = get_reader_from_lines(
+        [
+            "Plate information",
+            "Plate,Repeat,Barcode,Measured height,Chamber temperature at start,Formula,Kinetics,Measurement date,",
+            "2,1,,1.1,14.5,Calc 1: General = X / 2 where X = test,0,10/13/2022 3:08:06 PM,",
+            "",
+            "Background information",
+            "junk",
+            "",
+            "Calculated results",
+            "3,,3.5,",
+            ",,,",
+            ",4,,",
+        ]
+    )
+
+    expected = [
+        Plate(
+            plate_info=ResultPlateInfo(
+                number="2",
+                barcode="Plate 2",
+                emission_filter_id="2nd",
+                measurement_time="10/13/2022 3:08:06 PM",
+                measured_height=1.1,
+                chamber_temperature_at_start=14.5,
+            ),
+            calculated_results=[
+                CalculatedResult(col="A", row="01", value=3),
+                CalculatedResult(col="A", row="03", value=3.5),
+                CalculatedResult(col="C", row="02", value=4),
+            ],
+            results=[],
+        )
+    ]
 
 
 def test_create_basic_assay_info() -> None:

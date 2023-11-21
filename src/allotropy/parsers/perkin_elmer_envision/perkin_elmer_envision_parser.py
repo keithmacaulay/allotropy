@@ -36,10 +36,12 @@ from allotropy.allotrope.models.shared.definitions.custom import (
 from allotropy.allotrope.models.shared.definitions.definitions import TDateTimeValue
 from allotropy.parsers.lines_reader import CsvReader
 from allotropy.parsers.perkin_elmer_envision.perkin_elmer_envision_structure import (
+    CalculatedPlateInfo,
     Data,
     Plate,
     PlateMap,
     Result,
+    ResultPlateInfo,
 )
 from allotropy.parsers.vendor_parser import VendorParser
 
@@ -124,11 +126,13 @@ class PerkinElmerEnvisionParser(VendorParser):
     def _get_device_control_aggregate_document(
         self,
         data: Data,
-        plate: Plate,
+        result_plate_info: ResultPlateInfo,
         read_type: ReadType,
     ) -> DeviceControlAggregateDocument:
         ex_filter = data.labels.excitation_filter
-        em_filter = data.labels.get_emission_filter(plate.plate_info.emission_filter_id)
+        em_filter = data.labels.get_emission_filter(
+            result_plate_info.emission_filter_id
+        )
 
         if read_type == ReadType.LUMINESCENCE:
             return LuminescencePointDetectionDeviceControlAggregateDocument(
@@ -136,7 +140,7 @@ class PerkinElmerEnvisionParser(VendorParser):
                     LuminescencePointDetectionDeviceControlDocumentItem(
                         device_type="luminescence detector",
                         detector_distance_setting__plate_reader_=safe_value(
-                            TQuantityValueMillimeter, plate.plate_info.measured_height
+                            TQuantityValueMillimeter, result_plate_info.measured_height
                         ),
                         number_of_averages=safe_value(
                             TQuantityValueNumber, data.labels.number_of_flashes
@@ -160,7 +164,7 @@ class PerkinElmerEnvisionParser(VendorParser):
                     UltravioletAbsorbancePointDetectionDeviceControlDocumentItem(
                         device_type="absorbance detector",
                         detector_distance_setting__plate_reader_=safe_value(
-                            TQuantityValueMillimeter, plate.plate_info.measured_height
+                            TQuantityValueMillimeter, result_plate_info.measured_height
                         ),
                         number_of_averages=safe_value(
                             TQuantityValueNumber, data.labels.number_of_flashes
@@ -184,7 +188,7 @@ class PerkinElmerEnvisionParser(VendorParser):
                     FluorescencePointDetectionDeviceControlDocumentItem(
                         device_type="fluorescence detector",
                         detector_distance_setting__plate_reader_=safe_value(
-                            TQuantityValueMillimeter, plate.plate_info.measured_height
+                            TQuantityValueMillimeter, result_plate_info.measured_height
                         ),
                         number_of_averages=safe_value(
                             TQuantityValueNumber, data.labels.number_of_flashes
@@ -281,7 +285,7 @@ class PerkinElmerEnvisionParser(VendorParser):
         measurement_docs_dict = defaultdict(list)
 
         for plate in data.plates:
-            if plate.results is None:
+            if isinstance(plate.plate_info, CalculatedPlateInfo):
                 continue
 
             try:
@@ -291,7 +295,9 @@ class PerkinElmerEnvisionParser(VendorParser):
                 raise AllotropyError(msg) from e
 
             device_control_aggregate_document = (
-                self._get_device_control_aggregate_document(data, plate, read_type)
+                self._get_device_control_aggregate_document(
+                    data, plate.plate_info, read_type
+                )
             )
 
             for result in plate.results:

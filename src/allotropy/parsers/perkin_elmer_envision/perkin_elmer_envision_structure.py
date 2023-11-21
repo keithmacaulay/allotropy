@@ -18,7 +18,7 @@ from __future__ import annotations
 
 from dataclasses import dataclass
 from re import search
-from typing import Optional
+from typing import Optional, Union
 
 import numpy as np
 import pandas as pd
@@ -198,11 +198,6 @@ class Result:
 
     @staticmethod
     def create(reader: CsvReader) -> list[Result]:
-        if not reader.current_line_exists() or reader.match(
-            "(^Plate information)|(^Basic assay information)"
-        ):
-            return []
-
         # Results may or may not have a title
         reader.pop_if_match("^Results")
 
@@ -225,7 +220,8 @@ class Result:
 
 @dataclass
 class Plate:
-    plate_info: ResultPlateInfo
+    plate_info: Union[CalculatedPlateInfo, ResultPlateInfo]
+    calculated_results: list[CalculatedResult]
     results: list[Result]
 
     @staticmethod
@@ -233,11 +229,27 @@ class Plate:
         plates: list[Plate] = []
         while reader.match("^Plate information"):
             series = PlateInfo.get_series(reader)
-            if plate_info := ResultPlateInfo.create(series):
-                reader.drop_sections("^Background information|^Calculated results")
-                plates.append(Plate(plate_info, results=Result.create(reader)))
+            if result_plate_info := ResultPlateInfo.create(series):
+                reader.drop_sections("^Background information")
+                plates.append(
+                    Plate(
+                        result_plate_info,
+                        calculated_results=[],
+                        results=Result.create(reader),
+                    )
+                )
+            elif calculated_plate_info := CalculatedPlateInfo.create(series):
+                reader.drop_sections("^Background information")
+                plates.append(
+                    Plate(
+                        calculated_plate_info,
+                        calculated_results=CalculatedResult.create(reader),
+                        results=[],
+                    )
+                )
             else:
-                reader.drop_until("^Plate information|^Basic assay information")
+                msg = "Unable to interpret plate information"
+                raise AllotropyError(msg)
         return plates
 
 
