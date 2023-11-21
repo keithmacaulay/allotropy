@@ -20,6 +20,8 @@ from allotropy.allotrope.models.shared.definitions.custom import (
     TRelativeFluorescenceUnit,
 )
 from allotropy.parsers.perkin_elmer_envision.perkin_elmer_envision_structure import (
+    BackgroundInfo,
+    BackgroundInfoList,
     BasicAssayInfo,
     CalculatedResultList,
     Data,
@@ -47,6 +49,15 @@ def get_data() -> Data:
                     chamber_temperature_at_start=23.17,
                     label="AC HTRF Laser [Eu]",
                 ),
+                background_info=BackgroundInfoList(
+                    background_info=[
+                        BackgroundInfo(
+                            plate_num="1",
+                            label="AC HTRF Laser [Eu]",
+                            measinfo="De=1st Ex=Top Em=Top Wdw=1 (14)",
+                        ),
+                    ],
+                ),
                 calculated_results=CalculatedResultList([]),
                 results=ResultList([Result(col="A", row="01", value=31441)]),
             ),
@@ -59,6 +70,15 @@ def get_data() -> Data:
                     measured_height=11.9,
                     chamber_temperature_at_start=23.17,
                     label="AC HTRF Laser [Eu]",
+                ),
+                background_info=BackgroundInfoList(
+                    background_info=[
+                        BackgroundInfo(
+                            plate_num="1",
+                            label="AC HTRF Laser [Eu]",
+                            measinfo="De=2nd Ex=Top Em=Top Wdw=1 (142)",
+                        ),
+                    ],
                 ),
                 calculated_results=CalculatedResultList([]),
                 results=ResultList([Result(col="A", row="01", value=80368)]),
