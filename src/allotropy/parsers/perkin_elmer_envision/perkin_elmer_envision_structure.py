@@ -168,8 +168,13 @@ class CalculatedResult:
     row: str
     value: float
 
+
+@dataclass
+class CalculatedResultList:
+    calculated_results: list[CalculatedResult]
+
     @staticmethod
-    def create(reader: CsvReader) -> list[CalculatedResult]:
+    def create(reader: CsvReader) -> CalculatedResultList:
         # Calculated results may or may not have a title
         reader.pop_if_match("^Calculated results")
 
@@ -184,10 +189,12 @@ class CalculatedResult:
         series.index = [num_to_chars(i) for i in range(rows)]  # type: ignore[assignment]
         series.columns = [str(i).zfill(2) for i in range(1, cols + 1)]  # type: ignore[assignment]
 
-        return [
-            CalculatedResult(col, row, series.loc[col, row])
-            for col, row in series.stack().index
-        ]
+        return CalculatedResultList(
+            calculated_results=[
+                CalculatedResult(col, row, series.loc[col, row])
+                for col, row in series.stack().index
+            ]
+        )
 
 
 @dataclass
@@ -196,8 +203,13 @@ class Result:
     row: str
     value: int
 
+
+@dataclass
+class ResultList:
+    results: list[Result]
+
     @staticmethod
-    def create(reader: CsvReader) -> list[Result]:
+    def create(reader: CsvReader) -> ResultList:
         # Results may or may not have a title
         reader.pop_if_match("^Results")
 
@@ -212,17 +224,19 @@ class Result:
         series.index = [num_to_chars(i) for i in range(rows)]  # type: ignore[assignment]
         series.columns = [str(i).zfill(2) for i in range(1, cols + 1)]  # type: ignore[assignment]
 
-        return [
-            Result(col, row, int(series.loc[col, row]))
-            for col, row in series.stack().index
-        ]
+        return ResultList(
+            results=[
+                Result(col, row, int(series.loc[col, row]))
+                for col, row in series.stack().index
+            ]
+        )
 
 
 @dataclass
 class Plate:
     plate_info: Union[CalculatedPlateInfo, ResultPlateInfo]
-    calculated_results: list[CalculatedResult]
-    results: list[Result]
+    calculated_results: CalculatedResultList
+    results: ResultList
 
     @staticmethod
     def create(reader: CsvReader) -> list[Plate]:
@@ -234,8 +248,8 @@ class Plate:
                 plates.append(
                     Plate(
                         result_plate_info,
-                        calculated_results=[],
-                        results=Result.create(reader),
+                        calculated_results=CalculatedResultList([]),
+                        results=ResultList.create(reader),
                     )
                 )
             elif calculated_plate_info := CalculatedPlateInfo.create(series):
@@ -243,8 +257,8 @@ class Plate:
                 plates.append(
                     Plate(
                         calculated_plate_info,
-                        calculated_results=CalculatedResult.create(reader),
-                        results=[],
+                        calculated_results=CalculatedResultList.create(reader),
+                        results=ResultList([]),
                     )
                 )
             else:

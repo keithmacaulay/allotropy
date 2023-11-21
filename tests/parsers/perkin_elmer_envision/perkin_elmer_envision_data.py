@@ -21,6 +21,7 @@ from allotropy.allotrope.models.shared.definitions.custom import (
 )
 from allotropy.parsers.perkin_elmer_envision.perkin_elmer_envision_structure import (
     BasicAssayInfo,
+    CalculatedResultList,
     Data,
     Filter,
     Instrument,
@@ -28,6 +29,7 @@ from allotropy.parsers.perkin_elmer_envision.perkin_elmer_envision_structure imp
     Plate,
     PlateMap,
     Result,
+    ResultList,
     ResultPlateInfo,
 )
 
@@ -44,8 +46,8 @@ def get_data() -> Data:
                     measured_height=11.9,
                     chamber_temperature_at_start=23.17,
                 ),
-                calculated_results=[],
-                results=[Result(col="A", row="01", value=31441)],
+                calculated_results=CalculatedResultList([]),
+                results=ResultList([Result(col="A", row="01", value=31441)]),
             ),
             Plate(
                 plate_info=ResultPlateInfo(
@@ -56,8 +58,8 @@ def get_data() -> Data:
                     measured_height=11.9,
                     chamber_temperature_at_start=23.17,
                 ),
-                calculated_results=[],
-                results=[Result(col="A", row="01", value=80368)],
+                calculated_results=CalculatedResultList([]),
+                results=ResultList([Result(col="A", row="01", value=80368)]),
             ),
         ],
         basic_assay_info=BasicAssayInfo("100302", "3134"),
