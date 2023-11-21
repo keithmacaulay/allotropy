@@ -109,6 +109,29 @@ class PlateInfo:
 
 
 @dataclass
+class CalculatedPlateInfo(PlateInfo):
+    formula: str
+
+    @staticmethod
+    def create(series: pd.Series) -> Optional[CalculatedPlateInfo]:
+        plate_number = PlateInfo.get_plate_number(series)
+        return CalculatedPlateInfo(
+            plate_number,
+            barcode=PlateInfo.get_barcode(series, plate_number),
+            measurement_time=str_from_series(series, "Measurement date"),
+            measured_height=float_from_series(series, "Measured height"),
+            chamber_temperature_at_start=float_from_series(
+                series,
+                "Chamber temperature at start",
+            ),
+            formula=assert_not_none(
+                str_from_series(series, "Formula"),
+                msg="Unable to get expected formula for calculated results section",
+            ),
+        )
+
+
+@dataclass
 class ResultPlateInfo(PlateInfo):
     emission_filter_id: str
 
