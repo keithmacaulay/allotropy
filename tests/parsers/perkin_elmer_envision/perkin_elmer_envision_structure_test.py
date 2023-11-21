@@ -18,6 +18,7 @@ from allotropy.parsers.perkin_elmer_envision.perkin_elmer_envision_structure imp
     PlateMap,
     PlateType,
     Result,
+    ResultPlateInfo,
 )
 
 
@@ -34,7 +35,7 @@ def test_create_plate_info() -> None:
         ]
     )
 
-    expected = PlateInfo(
+    expected = ResultPlateInfo(
         number="1",
         barcode="BAR_123",
         emission_filter_id="1st",
@@ -43,7 +44,8 @@ def test_create_plate_info() -> None:
         chamber_temperature_at_start=23.17,
     )
 
-    assert PlateInfo.create(reader) == expected
+    series = PlateInfo.get_series(reader)
+    assert ResultPlateInfo.create(series) == expected
 
 
 def test_create_plate_info_default_barcode() -> None:
@@ -54,7 +56,8 @@ def test_create_plate_info_default_barcode() -> None:
             '1,1,"=""""",11.9,23.17,De=1st Ex=Top Em=Top Wdw=1 (14),0,10/13/2022 3:08:06 PM,',
         ]
     )
-    plate = PlateInfo.create(reader)
+    series = PlateInfo.get_series(reader)
+    plate = ResultPlateInfo.create(series)
     assert plate and plate.barcode == "Plate 1"
     reader = get_reader_from_lines(
         [
@@ -63,7 +66,8 @@ def test_create_plate_info_default_barcode() -> None:
             "1,1,,11.9,23.17,De=1st Ex=Top Em=Top Wdw=1 (14),0,10/13/2022 3:08:06 PM,",
         ]
     )
-    plate = PlateInfo.create(reader)
+    series = PlateInfo.get_series(reader)
+    plate = ResultPlateInfo.create(series)
     assert plate and plate.barcode == "Plate 1"
 
 
@@ -123,7 +127,7 @@ def test_create_plates() -> None:
 
     expected = [
         Plate(
-            plate_info=PlateInfo(
+            plate_info=ResultPlateInfo(
                 number="2",
                 barcode="Plate 2",
                 emission_filter_id="2nd",
