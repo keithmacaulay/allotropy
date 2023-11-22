@@ -181,6 +181,7 @@ def test_create_plates() -> None:
                 number="2",
                 barcode="Plate 2",
                 formula="Calc 1: General = X / 2 where X = test",
+                name="X / 2 where X = test",
                 measurement_time="10/13/2022 3:08:06 PM",
                 measured_height=1.1,
                 chamber_temperature_at_start=14.5,
