@@ -2,7 +2,6 @@ from collections import defaultdict
 from enum import Enum
 from io import IOBase
 from typing import Any, cast, Optional, TypeVar, Union
-import uuid
 
 from allotropy.allotrope.allotrope import AllotropyError
 from allotropy.allotrope.models.plate_reader_benchling_2023_09_plate_reader import (
@@ -237,7 +236,7 @@ class PerkinElmerEnvisionParser(VendorParser):
         )
         if read_type == ReadType.ABSORBANCE:
             return UltravioletAbsorbancePointDetectionMeasurementDocumentItems(
-                measurement_identifier=str(uuid.uuid4()),
+                measurement_identifier=result.uuid,
                 sample_document=sample_document,
                 device_control_aggregate_document=UltravioletAbsorbancePointDetectionDeviceControlAggregateDocument(
                     device_control_document=cast(
@@ -252,7 +251,7 @@ class PerkinElmerEnvisionParser(VendorParser):
             )
         elif read_type == ReadType.LUMINESCENCE:
             return LuminescencePointDetectionMeasurementDocumentItems(
-                measurement_identifier=str(uuid.uuid4()),
+                measurement_identifier=result.uuid,
                 sample_document=sample_document,
                 device_control_aggregate_document=LuminescencePointDetectionDeviceControlAggregateDocument(
                     device_control_document=cast(
@@ -265,7 +264,7 @@ class PerkinElmerEnvisionParser(VendorParser):
             )
         else:  # read_type is FLUORESCENCE
             return FluorescencePointDetectionMeasurementDocumentItems(
-                measurement_identifier=str(uuid.uuid4()),
+                measurement_identifier=result.uuid,
                 sample_document=sample_document,
                 device_control_aggregate_document=FluorescencePointDetectionDeviceControlAggregateDocument(
                     device_control_document=cast(
