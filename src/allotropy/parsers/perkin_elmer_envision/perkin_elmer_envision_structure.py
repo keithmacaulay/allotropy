@@ -144,6 +144,7 @@ class CalculatedPlateInfo(PlateInfo):
 @dataclass
 class ResultPlateInfo(PlateInfo):
     label: str
+    measinfo: str
     emission_filter_id: str
 
     @staticmethod
@@ -174,6 +175,7 @@ class ResultPlateInfo(PlateInfo):
                 "Chamber temperature at start",
             ),
             label=label,
+            measinfo=measinfo,
             emission_filter_id=emission_id_search_result.group(1),
         )
 
