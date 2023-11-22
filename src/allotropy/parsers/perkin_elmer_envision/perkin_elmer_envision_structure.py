@@ -311,32 +311,37 @@ class Plate:
     results: ResultList
 
     @staticmethod
-    def create(reader: CsvReader) -> list[Plate]:
+    def create(reader: CsvReader) -> Plate:
+        series = PlateInfo.get_series(reader)
+        if result_plate_info := ResultPlateInfo.create(series):
+            return Plate(
+                result_plate_info,
+                background_info=BackgroundInfoList.create(reader),
+                calculated_results=CalculatedResultList([]),
+                results=ResultList.create(reader),
+            )
+        elif calculated_plate_info := CalculatedPlateInfo.create(series):
+            return Plate(
+                calculated_plate_info,
+                background_info=BackgroundInfoList.create(reader),
+                calculated_results=CalculatedResultList.create(reader),
+                results=ResultList([]),
+            )
+        else:
+            msg = "Unable to interpret plate information"
+            raise AllotropyError(msg)
+
+
+@dataclass
+class PlateList:
+    plates: list[Plate]
+
+    @staticmethod
+    def create(reader: CsvReader) -> PlateList:
         plates: list[Plate] = []
         while reader.match("^Plate information"):
-            series = PlateInfo.get_series(reader)
-            if result_plate_info := ResultPlateInfo.create(series):
-                plates.append(
-                    Plate(
-                        result_plate_info,
-                        background_info=BackgroundInfoList.create(reader),
-                        calculated_results=CalculatedResultList([]),
-                        results=ResultList.create(reader),
-                    )
-                )
-            elif calculated_plate_info := CalculatedPlateInfo.create(series):
-                plates.append(
-                    Plate(
-                        calculated_plate_info,
-                        background_info=BackgroundInfoList.create(reader),
-                        calculated_results=CalculatedResultList.create(reader),
-                        results=ResultList([]),
-                    )
-                )
-            else:
-                msg = "Unable to interpret plate information"
-                raise AllotropyError(msg)
-        return plates
+            plates.append(Plate.create(reader))
+        return PlateList(plates)
 
 
 @dataclass
@@ -595,7 +600,7 @@ class Instrument:
 
 @dataclass
 class Data:
-    plates: list[Plate]
+    plates: PlateList
     basic_assay_info: BasicAssayInfo
     number_of_wells: float
     plate_maps: dict[str, PlateMap]
@@ -605,7 +610,7 @@ class Data:
     @staticmethod
     def create(reader: CsvReader) -> Data:
         return Data(
-            plates=Plate.create(reader),
+            plates=PlateList.create(reader),
             basic_assay_info=BasicAssayInfo.create(reader),
             number_of_wells=PlateType.create(reader).number_of_wells,
             plate_maps=create_plate_maps(reader),

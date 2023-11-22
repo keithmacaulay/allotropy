@@ -52,10 +52,6 @@ def rm_plate_uuids(plate: Plate) -> Plate:
     return plate
 
 
-def rm_plates_uuids(plates: list[Plate]) -> list[Plate]:
-    return [rm_plate_uuids(plate) for plate in plates]
-
-
 def test_create_plate_info() -> None:
     reader = get_reader_from_lines(
         [
@@ -165,59 +161,57 @@ def test_create_plates() -> None:
         ]
     )
 
-    expected = [
-        Plate(
-            plate_info=ResultPlateInfo(
-                number="2",
-                barcode="Plate 2",
-                emission_filter_id="2nd",
-                measurement_time="10/13/2022 3:08:06 PM",
-                measured_height=1.1,
-                chamber_temperature_at_start=14.5,
-                label="AC HTRF Laser [Eu](1)",
-            ),
-            background_info=BackgroundInfoList(
-                background_info=[
-                    BackgroundInfo(
-                        plate_num="2",
-                        label="AC HTRF Laser [Eu]",
-                        measinfo="De=1st Ex=Top Em=Top Wdw=1 (14)",
-                    ),
-                    BackgroundInfo(
-                        plate_num="2",
-                        label="AC HTRF Laser [Eu]",
-                        measinfo="De=2nd Ex=Top Em=Top Wdw=1 (142)",
-                    ),
-                ],
-            ),
-            calculated_results=CalculatedResultList([]),
-            results=ResultList(
-                results=[
-                    Result(
-                        uuid="68893bf4-218e-45ed-9622-01e9211a2608",
-                        col="A",
-                        row="01",
-                        value=6,
-                    ),
-                    Result(
-                        uuid="d549e030-8fe2-4a24-8d58-f6abdf5010d6",
-                        col="A",
-                        row="03",
-                        value=7,
-                    ),
-                    Result(
-                        uuid="1a82a766-5ff6-4b02-9d4f-3d2fe71ea55e",
-                        col="C",
-                        row="02",
-                        value=8,
-                    ),
-                ],
-            ),
-        )
-    ]
+    expected = Plate(
+        plate_info=ResultPlateInfo(
+            number="2",
+            barcode="Plate 2",
+            emission_filter_id="2nd",
+            measurement_time="10/13/2022 3:08:06 PM",
+            measured_height=1.1,
+            chamber_temperature_at_start=14.5,
+            label="AC HTRF Laser [Eu](1)",
+        ),
+        background_info=BackgroundInfoList(
+            background_info=[
+                BackgroundInfo(
+                    plate_num="2",
+                    label="AC HTRF Laser [Eu]",
+                    measinfo="De=1st Ex=Top Em=Top Wdw=1 (14)",
+                ),
+                BackgroundInfo(
+                    plate_num="2",
+                    label="AC HTRF Laser [Eu]",
+                    measinfo="De=2nd Ex=Top Em=Top Wdw=1 (142)",
+                ),
+            ],
+        ),
+        calculated_results=CalculatedResultList([]),
+        results=ResultList(
+            results=[
+                Result(
+                    uuid="68893bf4-218e-45ed-9622-01e9211a2608",
+                    col="A",
+                    row="01",
+                    value=6,
+                ),
+                Result(
+                    uuid="d549e030-8fe2-4a24-8d58-f6abdf5010d6",
+                    col="A",
+                    row="03",
+                    value=7,
+                ),
+                Result(
+                    uuid="1a82a766-5ff6-4b02-9d4f-3d2fe71ea55e",
+                    col="C",
+                    row="02",
+                    value=8,
+                ),
+            ],
+        ),
+    )
 
     plate = Plate.create(reader)
-    assert rm_plates_uuids(plate) == rm_plates_uuids(expected)
+    assert rm_plate_uuids(plate) == rm_plate_uuids(expected)
 
     reader = get_reader_from_lines(
         [
@@ -237,59 +231,57 @@ def test_create_plates() -> None:
         ]
     )
 
-    expected = [
-        Plate(
-            plate_info=CalculatedPlateInfo(
-                number="2",
-                barcode="Plate 2",
-                formula="Calc 1: General = X / 2 where X = test",
-                name="X / 2 where X = test",
-                measurement_time="10/13/2022 3:08:06 PM",
-                measured_height=1.1,
-                chamber_temperature_at_start=14.5,
-            ),
-            background_info=BackgroundInfoList(
-                background_info=[
-                    BackgroundInfo(
-                        plate_num="2",
-                        label="AC HTRF Laser [Eu]",
-                        measinfo="De=1st Ex=Top Em=Top Wdw=1 (14)",
-                    ),
-                    BackgroundInfo(
-                        plate_num="2",
-                        label="AC HTRF Laser [Eu]",
-                        measinfo="De=2nd Ex=Top Em=Top Wdw=1 (142)",
-                    ),
-                ],
-            ),
-            calculated_results=CalculatedResultList(
-                calculated_results=[
-                    CalculatedResult(
-                        uuid="68893bf4-218e-45ed-9622-01e9211a2608",
-                        col="A",
-                        row="01",
-                        value=3,
-                    ),
-                    CalculatedResult(
-                        uuid="d549e030-8fe2-4a24-8d58-f6abdf5010d6",
-                        col="A",
-                        row="03",
-                        value=3.5,
-                    ),
-                    CalculatedResult(
-                        uuid="1a82a766-5ff6-4b02-9d4f-3d2fe71ea55e",
-                        col="C",
-                        row="02",
-                        value=4,
-                    ),
-                ],
-            ),
-            results=ResultList([]),
-        )
-    ]
+    expected = Plate(
+        plate_info=CalculatedPlateInfo(
+            number="2",
+            barcode="Plate 2",
+            formula="Calc 1: General = X / 2 where X = test",
+            name="X / 2 where X = test",
+            measurement_time="10/13/2022 3:08:06 PM",
+            measured_height=1.1,
+            chamber_temperature_at_start=14.5,
+        ),
+        background_info=BackgroundInfoList(
+            background_info=[
+                BackgroundInfo(
+                    plate_num="2",
+                    label="AC HTRF Laser [Eu]",
+                    measinfo="De=1st Ex=Top Em=Top Wdw=1 (14)",
+                ),
+                BackgroundInfo(
+                    plate_num="2",
+                    label="AC HTRF Laser [Eu]",
+                    measinfo="De=2nd Ex=Top Em=Top Wdw=1 (142)",
+                ),
+            ],
+        ),
+        calculated_results=CalculatedResultList(
+            calculated_results=[
+                CalculatedResult(
+                    uuid="68893bf4-218e-45ed-9622-01e9211a2608",
+                    col="A",
+                    row="01",
+                    value=3,
+                ),
+                CalculatedResult(
+                    uuid="d549e030-8fe2-4a24-8d58-f6abdf5010d6",
+                    col="A",
+                    row="03",
+                    value=3.5,
+                ),
+                CalculatedResult(
+                    uuid="1a82a766-5ff6-4b02-9d4f-3d2fe71ea55e",
+                    col="C",
+                    row="02",
+                    value=4,
+                ),
+            ],
+        ),
+        results=ResultList([]),
+    )
 
     plate = Plate.create(reader)
-    assert rm_plates_uuids(plate) == rm_plates_uuids(expected)
+    assert rm_plate_uuids(plate) == rm_plate_uuids(expected)
 
 
 def test_create_basic_assay_info() -> None:

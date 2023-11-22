@@ -112,7 +112,7 @@ class PerkinElmerEnvisionParser(VendorParser):
     def _get_measurement_time(self, data: Data) -> TDateTimeValue:
         dates = [
             plate.plate_info.measurement_time
-            for plate in data.plates
+            for plate in data.plates.plates
             if plate.plate_info.measurement_time
         ]
 
@@ -283,7 +283,7 @@ class PerkinElmerEnvisionParser(VendorParser):
 
         measurement_docs_dict = defaultdict(list)
 
-        for plate in data.plates:
+        for plate in data.plates.plates:
             if isinstance(plate.plate_info, CalculatedPlateInfo):
                 continue
 
