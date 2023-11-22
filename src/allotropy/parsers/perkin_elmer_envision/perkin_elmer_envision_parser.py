@@ -5,7 +5,11 @@ from typing import Any, cast, Optional, TypeVar, Union
 
 from allotropy.allotrope.allotrope import AllotropyError
 from allotropy.allotrope.models.plate_reader_benchling_2023_09_plate_reader import (
+    CalculatedDataAggregateDocument,
+    CalculatedDataDocumentItem,
     ContainerType,
+    DataSourceAggregateDocument1,
+    DataSourceDocumentItem,
     DeviceControlDocument,
     DeviceSystemDocument,
     FluorescencePointDetectionDeviceControlAggregateDocument,
@@ -32,7 +36,10 @@ from allotropy.allotrope.models.shared.definitions.custom import (
     TRelativeFluorescenceUnit,
     TRelativeLightUnit,
 )
-from allotropy.allotrope.models.shared.definitions.definitions import TDateTimeValue
+from allotropy.allotrope.models.shared.definitions.definitions import (
+    TDateTimeValue,
+    TQuantityValue,
+)
 from allotropy.parsers.lines_reader import CsvReader
 from allotropy.parsers.perkin_elmer_envision.perkin_elmer_envision_structure import (
     CalculatedPlateInfo,
@@ -87,6 +94,9 @@ class PerkinElmerEnvisionParser(VendorParser):
                 device_system_document=DeviceSystemDocument(
                     model_number=data.instrument.serial_number,
                     device_identifier=data.instrument.nickname,
+                ),
+                calculated_data_aggregate_document=self._get_calculated_data_aggregate_document(
+                    data
                 ),
             ),
             field_asm_manifest="http://purl.allotrope.org/manifests/plate-reader/BENCHLING/2023/09/plate-reader.manifest",
@@ -332,3 +342,47 @@ class PerkinElmerEnvisionParser(VendorParser):
             )
 
         return items
+
+    def _get_calculated_data_aggregate_document(
+        self, data: Data
+    ) -> Optional[CalculatedDataAggregateDocument]:
+        calculated_documents = []
+
+        for calculated_plate in data.plates.plates:
+            if isinstance(calculated_plate.plate_info, ResultPlateInfo):
+                continue
+
+            source_result_lists = [
+                source_plate.results.results
+                for source_plate in calculated_plate.collect_result_plates(data.plates)
+            ]
+
+            for calculated_result, *source_results in zip(
+                calculated_plate.calculated_results.calculated_results,
+                *source_result_lists,
+            ):
+                calculated_documents.append(
+                    CalculatedDataDocumentItem(
+                        calculated_data_identifier=calculated_result.uuid,
+                        calculated_data_name=calculated_plate.plate_info.name,
+                        calculation_description=calculated_plate.plate_info.formula,
+                        calculated_result=TQuantityValue(
+                            value=calculated_result.value,
+                            unit="unitless",
+                        ),
+                        data_source_aggregate_document=DataSourceAggregateDocument1(
+                            data_source_document=[
+                                DataSourceDocumentItem(
+                                    data_source_identifier=source_result.uuid,
+                                    data_source_feature="",
+                                )
+                                for source_result in source_results
+                            ]
+                        ),
+                    )
+                )
+
+        CalculatedDataAggregateDocument(
+            calculated_data_document=calculated_documents,
+        )
+        return None
