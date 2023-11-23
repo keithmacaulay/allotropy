@@ -11,7 +11,7 @@
                     },
                     "measurement document": [
                         {
-                            "measurement identifier": "6f05be20-2338-4096-a472-5d8f5ad209ee",
+                            "measurement identifier": "51c18b00-2537-4191-98cc-497a6e277b45",
                             "device control aggregate document": {
                                 "device control document": [
                                     {
@@ -61,7 +61,7 @@
                             }
                         },
                         {
-                            "measurement identifier": "d8c0a01f-3f82-4129-a696-7b29d2b54432",
+                            "measurement identifier": "c0ba072e-4b59-4cda-a10e-23743ee8806b",
                             "device control aggregate document": {
                                 "device control document": [
                                     {
@@ -125,7 +125,7 @@
                     },
                     "measurement document": [
                         {
-                            "measurement identifier": "c053643a-2957-45fc-97cc-9d80357d0755",
+                            "measurement identifier": "5de33fa9-4254-4d46-8907-717d417b6b75",
                             "device control aggregate document": {
                                 "device control document": [
                                     {
@@ -175,7 +175,7 @@
                             }
                         },
                         {
-                            "measurement identifier": "a78b0460-320b-43ab-a214-acda16ff7a45",
+                            "measurement identifier": "e59e0077-9f71-4faa-a2ba-3169f7f72d76",
                             "device control aggregate document": {
                                 "device control document": [
                                     {
@@ -239,7 +239,7 @@
                     },
                     "measurement document": [
                         {
-                            "measurement identifier": "198bc10a-975a-4adf-88f2-186d121dd248",
+                            "measurement identifier": "1c2f8112-87c0-4702-84ed-e42982cfe2fa",
                             "device control aggregate document": {
                                 "device control document": [
                                     {
@@ -289,7 +289,7 @@
                             }
                         },
                         {
-                            "measurement identifier": "18701d65-0e14-45b7-a7ea-9d19f342ac54",
+                            "measurement identifier": "012f1ba1-68f0-4471-8b98-f594700959da",
                             "device control aggregate document": {
                                 "device control document": [
                                     {
@@ -353,7 +353,7 @@
                     },
                     "measurement document": [
                         {
-                            "measurement identifier": "0e70305e-2ace-4435-9eb6-a85fb65d4f48",
+                            "measurement identifier": "2985b45a-cb64-4178-ad16-b5c731fc9b98",
                             "device control aggregate document": {
                                 "device control document": [
                                     {
@@ -403,7 +403,7 @@
                             }
                         },
                         {
-                            "measurement identifier": "36ec15c0-d3ba-4ff1-ba17-9e49ebc54265",
+                            "measurement identifier": "f68b7a82-bde1-4dab-9a78-d72fd6c66d34",
                             "device control aggregate document": {
                                 "device control document": [
                                     {
@@ -467,7 +467,7 @@
                     },
                     "measurement document": [
                         {
-                            "measurement identifier": "80973dcf-0e66-49f9-b103-5cb232662385",
+                            "measurement identifier": "809dab22-9497-443a-9dca-be76a8c8b88e",
                             "device control aggregate document": {
                                 "device control document": [
                                     {
@@ -517,7 +517,7 @@
                             }
                         },
                         {
-                            "measurement identifier": "54549584-3edd-4048-a29a-9addaa920bf3",
+                            "measurement identifier": "c55a929f-00c9-4af7-9091-d56922e46f26",
                             "device control aggregate document": {
                                 "device control document": [
                                     {
@@ -581,7 +581,7 @@
                     },
                     "measurement document": [
                         {
-                            "measurement identifier": "83d76688-77a2-4a63-9a89-7698de34494d",
+                            "measurement identifier": "e7b6101e-b66e-41c2-b9c9-7ee08549912b",
                             "device control aggregate document": {
                                 "device control document": [
                                     {
@@ -631,7 +631,7 @@
                             }
                         },
                         {
-                            "measurement identifier": "a4453431-aab4-4157-9a31-2714d6124122",
+                            "measurement identifier": "495bb9ad-e545-4e12-affc-98bb2bdd4b5c",
                             "device control aggregate document": {
                                 "device control document": [
                                     {
@@ -695,7 +695,7 @@
                     },
                     "measurement document": [
                         {
-                            "measurement identifier": "3032315c-b947-4e1d-90bd-8f8021a9d8a8",
+                            "measurement identifier": "1aa2b7ab-881c-49ee-a3cd-ec1aa772d664",
                             "device control aggregate document": {
                                 "device control document": [
                                     {
@@ -745,7 +745,7 @@
                             }
                         },
                         {
-                            "measurement identifier": "82d9db8f-ec9b-4a4d-bbb0-e430e4d9b6f6",
+                            "measurement identifier": "ea342d6a-87d1-4796-8519-697b0c9592cf",
                             "device control aggregate document": {
                                 "device control document": [
                                     {
@@ -809,7 +809,7 @@
                     },
                     "measurement document": [
                         {
-                            "measurement identifier": "25d2e11f-3777-4ec4-b733-c1044c881ba7",
+                            "measurement identifier": "1e4fd0fe-83e1-4df2-afd9-7125328ed055",
                             "device control aggregate document": {
                                 "device control document": [
                                     {
@@ -859,7 +859,7 @@
                             }
                         },
                         {
-                            "measurement identifier": "fc9f8087-07d8-4444-8cfb-1ca1bddec3a7",
+                            "measurement identifier": "3a44cf7f-c595-4a33-9b5c-089d546c036a",
                             "device control aggregate document": {
                                 "device control document": [
                                     {
@@ -923,7 +923,7 @@
                     },
                     "measurement document": [
                         {
-                            "measurement identifier": "7e88ce5a-297a-4f75-8edc-70af8b9985ef",
+                            "measurement identifier": "5d700af5-429f-4e2f-89b6-b72d41aca566",
                             "device control aggregate document": {
                                 "device control document": [
                                     {
@@ -973,7 +973,7 @@
                             }
                         },
                         {
-                            "measurement identifier": "8db1e4a4-35d8-478d-aaa8-661661970e32",
+                            "measurement identifier": "78a4ac8a-1ca8-4a5d-9f43-3c8fb884bbcf",
                             "device control aggregate document": {
                                 "device control document": [
                                     {
@@ -1037,7 +1037,7 @@
                     },
                     "measurement document": [
                         {
-                            "measurement identifier": "0eedfc7e-f863-4757-a409-8278e991e68a",
+                            "measurement identifier": "51b02eba-60dd-404f-96f9-04ddaaf139a7",
                             "device control aggregate document": {
                                 "device control document": [
                                     {
@@ -1087,7 +1087,7 @@
                             }
                         },
                         {
-                            "measurement identifier": "acaba9c7-aa92-409e-bef4-c39aa65ad69d",
+                            "measurement identifier": "a8001de2-f8b6-404f-8341-8c083a9421ee",
                             "device control aggregate document": {
                                 "device control document": [
                                     {
@@ -1151,7 +1151,7 @@
                     },
                     "measurement document": [
                         {
-                            "measurement identifier": "b2b059b5-f76b-46a0-a81b-1a55a08e0bb0",
+                            "measurement identifier": "5d9aa139-c2fa-4172-b150-69bc13c10b23",
                             "device control aggregate document": {
                                 "device control document": [
                                     {
@@ -1201,7 +1201,7 @@
                             }
                         },
                         {
-                            "measurement identifier": "55cbd2a1-5f52-4035-9b2d-b16af32ed1d0",
+                            "measurement identifier": "3d08094c-196b-4a58-99c4-34c5564d6cfe",
                             "device control aggregate document": {
                                 "device control document": [
                                     {
@@ -1265,7 +1265,7 @@
                     },
                     "measurement document": [
                         {
-                            "measurement identifier": "52b9635f-6aca-409e-a2c6-ab6141514d3f",
+                            "measurement identifier": "297b1d70-63bf-4161-98c0-9be49bfb32f2",
                             "device control aggregate document": {
                                 "device control document": [
                                     {
@@ -1315,7 +1315,7 @@
                             }
                         },
                         {
-                            "measurement identifier": "ff1d0b76-e046-4c42-b5ed-e21cb19cc97d",
+                            "measurement identifier": "723704d8-b476-4b84-8de5-33fc729e582a",
                             "device control aggregate document": {
                                 "device control document": [
                                     {
@@ -1379,7 +1379,7 @@
                     },
                     "measurement document": [
                         {
-                            "measurement identifier": "011dad0b-9c7c-43f4-9a7e-73d0b1363d49",
+                            "measurement identifier": "e0b1f620-fca5-4f3b-ba2c-aba27007ab1d",
                             "device control aggregate document": {
                                 "device control document": [
                                     {
@@ -1429,7 +1429,7 @@
                             }
                         },
                         {
-                            "measurement identifier": "0856fbe2-6ca4-4491-84fe-859a8991a72f",
+                            "measurement identifier": "aa0dfdca-df35-42d8-ad5b-a3eaf65c7e86",
                             "device control aggregate document": {
                                 "device control document": [
                                     {
@@ -1493,7 +1493,7 @@
                     },
                     "measurement document": [
                         {
-                            "measurement identifier": "2dc1f1e4-96d5-4040-ac46-e699251d2c91",
+                            "measurement identifier": "9c801bf9-42a3-4f15-b737-9f551d7bb07b",
                             "device control aggregate document": {
                                 "device control document": [
                                     {
@@ -1543,7 +1543,7 @@
                             }
                         },
                         {
-                            "measurement identifier": "ccbfe6db-bf23-4cf4-986c-c0dd21d14e9e",
+                            "measurement identifier": "1d79aba6-ff61-4ba3-b0e9-67b24d61e2c8",
                             "device control aggregate document": {
                                 "device control document": [
                                     {
@@ -1607,7 +1607,7 @@
                     },
                     "measurement document": [
                         {
-                            "measurement identifier": "60e0d17c-946d-4eec-afad-0fb81e575baa",
+                            "measurement identifier": "77fbdade-f336-472d-9a07-a1c0063af421",
                             "device control aggregate document": {
                                 "device control document": [
                                     {
@@ -1657,7 +1657,7 @@
                             }
                         },
                         {
-                            "measurement identifier": "cd75b88c-cf51-4ee4-9cbf-87ea04ce1aef",
+                            "measurement identifier": "bff5d5af-c0e6-4bc6-9a7d-500f4cb6608f",
                             "device control aggregate document": {
                                 "device control document": [
                                     {
@@ -1721,7 +1721,7 @@
                     },
                     "measurement document": [
                         {
-                            "measurement identifier": "2e376cdc-8622-4936-9df2-316f2f127b78",
+                            "measurement identifier": "4bdbfbc4-93f8-4b29-9e39-d87220265e5d",
                             "device control aggregate document": {
                                 "device control document": [
                                     {
@@ -1771,7 +1771,7 @@
                             }
                         },
                         {
-                            "measurement identifier": "a05ec160-624e-4e1d-9169-e1a6b285ca39",
+                            "measurement identifier": "eb5c58a0-fb27-43f0-b07e-b3f6db843810",
                             "device control aggregate document": {
                                 "device control document": [
                                     {
@@ -1835,7 +1835,7 @@
                     },
                     "measurement document": [
                         {
-                            "measurement identifier": "81cc2903-5f89-47c3-be6c-b720b3b12597",
+                            "measurement identifier": "a5014cd0-83bb-4e6a-afdb-8859332734c7",
                             "device control aggregate document": {
                                 "device control document": [
                                     {
@@ -1885,7 +1885,7 @@
                             }
                         },
                         {
-                            "measurement identifier": "bb9d6369-8439-4208-926c-dbcb2c921cb7",
+                            "measurement identifier": "1acb3f0d-86a8-420c-8625-65ecfcb1d3f2",
                             "device control aggregate document": {
                                 "device control document": [
                                     {
@@ -1949,7 +1949,7 @@
                     },
                     "measurement document": [
                         {
-                            "measurement identifier": "16e97118-cf47-4e7b-9d44-b62d66108eff",
+                            "measurement identifier": "5c3a2168-a33c-4969-a86f-55fd029829ab",
                             "device control aggregate document": {
                                 "device control document": [
                                     {
@@ -1999,7 +1999,7 @@
                             }
                         },
                         {
-                            "measurement identifier": "476b6790-0878-4afe-98aa-50ffbb56ca99",
+                            "measurement identifier": "67d87dc0-bda9-424e-98cb-9e0c47d991a9",
                             "device control aggregate document": {
                                 "device control document": [
                                     {
@@ -2063,7 +2063,7 @@
                     },
                     "measurement document": [
                         {
-                            "measurement identifier": "66ead072-668a-4b1c-8988-22ce2ba4aaaf",
+                            "measurement identifier": "bf624c34-e71d-4cf5-84d0-4599bd73ca39",
                             "device control aggregate document": {
                                 "device control document": [
                                     {
@@ -2113,7 +2113,7 @@
                             }
                         },
                         {
-                            "measurement identifier": "e8b6f626-7e67-47c5-b964-76425a225997",
+                            "measurement identifier": "074e0511-25d6-41f6-ba26-91ae52c03b0c",
                             "device control aggregate document": {
                                 "device control document": [
                                     {
@@ -2177,7 +2177,7 @@
                     },
                     "measurement document": [
                         {
-                            "measurement identifier": "450e33e4-dd1d-4142-af8f-1ce87b0803b5",
+                            "measurement identifier": "4fc5b285-1db3-45bf-b7d4-dcbc0cdf48e1",
                             "device control aggregate document": {
                                 "device control document": [
                                     {
@@ -2227,7 +2227,7 @@
                             }
                         },
                         {
-                            "measurement identifier": "52e986f9-eeb4-4395-ac42-cf21bea501a7",
+                            "measurement identifier": "271617f2-405a-49b3-9ee6-8b430a241e1f",
                             "device control aggregate document": {
                                 "device control document": [
                                     {
@@ -2291,7 +2291,7 @@
                     },
                     "measurement document": [
                         {
-                            "measurement identifier": "d914ccb1-25a7-4a17-af71-8a7b644599a2",
+                            "measurement identifier": "0a0869ed-8ae9-4fd5-bbe0-e9003918294e",
                             "device control aggregate document": {
                                 "device control document": [
                                     {
@@ -2341,7 +2341,7 @@
                             }
                         },
                         {
-                            "measurement identifier": "e08ee6b9-266f-423d-8df9-68413ee4d5c0",
+                            "measurement identifier": "2aa6c855-c94b-43d7-be62-ae8879c4bdd1",
                             "device control aggregate document": {
                                 "device control document": [
                                     {
@@ -2405,7 +2405,7 @@
                     },
                     "measurement document": [
                         {
-                            "measurement identifier": "2a8fd4d2-7ff9-4dfc-9ca8-d81bd6c4b851",
+                            "measurement identifier": "a223b09e-3421-4c64-bbcb-234a3e3128ec",
                             "device control aggregate document": {
                                 "device control document": [
                                     {
@@ -2455,7 +2455,7 @@
                             }
                         },
                         {
-                            "measurement identifier": "fbc3adca-4c95-4ac4-9ad1-9ac1b69727f4",
+                            "measurement identifier": "1d888511-8eb9-4066-9da7-ff9d1a8aee61",
                             "device control aggregate document": {
                                 "device control document": [
                                     {
@@ -2519,7 +2519,7 @@
                     },
                     "measurement document": [
                         {
-                            "measurement identifier": "b2cb8b23-7e27-4d96-9640-510c0165ac6b",
+                            "measurement identifier": "f07b20c3-5543-4f18-bae5-a796e1dcf6ea",
                             "device control aggregate document": {
                                 "device control document": [
                                     {
@@ -2569,7 +2569,7 @@
                             }
                         },
                         {
-                            "measurement identifier": "0a76ccc3-f8df-4fd9-83ae-a31edd3c9778",
+                            "measurement identifier": "25347d18-7c64-4e38-a14c-d7bdb159bf93",
                             "device control aggregate document": {
                                 "device control document": [
                                     {
@@ -2633,7 +2633,7 @@
                     },
                     "measurement document": [
                         {
-                            "measurement identifier": "1f136ca3-9549-4975-9ce4-402b3d8a68bb",
+                            "measurement identifier": "de1e4994-08b9-4528-9cc7-f7c267a8d755",
                             "device control aggregate document": {
                                 "device control document": [
                                     {
@@ -2683,7 +2683,7 @@
                             }
                         },
                         {
-                            "measurement identifier": "624305d6-5d7e-47a5-86cc-6245420e15cf",
+                            "measurement identifier": "6dbc036d-5505-4841-8dc7-2b06c3407862",
                             "device control aggregate document": {
                                 "device control document": [
                                     {
@@ -2747,7 +2747,7 @@
                     },
                     "measurement document": [
                         {
-                            "measurement identifier": "59393644-a8a1-4422-b141-996240ab3c93",
+                            "measurement identifier": "f7d5445c-8900-4273-8bdd-fa243801c235",
                             "device control aggregate document": {
                                 "device control document": [
                                     {
@@ -2797,7 +2797,7 @@
                             }
                         },
                         {
-                            "measurement identifier": "3252f28a-1825-4a2c-a4f8-603f9fd6898f",
+                            "measurement identifier": "c8b0759d-6061-45d5-9276-dc5b63866922",
                             "device control aggregate document": {
                                 "device control document": [
                                     {
@@ -2861,7 +2861,7 @@
                     },
                     "measurement document": [
                         {
-                            "measurement identifier": "fc4607c6-587c-46e0-b2ec-2e4c4f0cd088",
+                            "measurement identifier": "bf208e54-0adb-4b8f-9307-839b899daea6",
                             "device control aggregate document": {
                                 "device control document": [
                                     {
@@ -2911,7 +2911,7 @@
                             }
                         },
                         {
-                            "measurement identifier": "c8585f45-d970-4fc1-9f34-fdb3fe82b93b",
+                            "measurement identifier": "591e4a13-ce14-4047-b215-44d2b4bde1c9",
                             "device control aggregate document": {
                                 "device control document": [
                                     {
@@ -2975,7 +2975,7 @@
                     },
                     "measurement document": [
                         {
-                            "measurement identifier": "2be40448-3dc9-4a43-a3ea-90ea9e0446f8",
+                            "measurement identifier": "98931222-bda0-41b1-98c9-dff589ff5734",
                             "device control aggregate document": {
                                 "device control document": [
                                     {
@@ -3025,7 +3025,7 @@
                             }
                         },
                         {
-                            "measurement identifier": "5c7c29c9-fdf6-45c1-acbe-1b4966cad238",
+                            "measurement identifier": "327b5b09-4042-4e2f-8a34-ace8fe08f7f6",
                             "device control aggregate document": {
                                 "device control document": [
                                     {
@@ -3089,7 +3089,7 @@
                     },
                     "measurement document": [
                         {
-                            "measurement identifier": "b287d1e5-d8a5-4b9a-bf61-a9452ba3cf95",
+                            "measurement identifier": "88f11594-5437-4e9b-b7fd-e4ed63ea1317",
                             "device control aggregate document": {
                                 "device control document": [
                                     {
@@ -3139,7 +3139,7 @@
                             }
                         },
                         {
-                            "measurement identifier": "12312d9b-697d-473d-9849-30e93ae77c91",
+                            "measurement identifier": "0cd75f0e-677b-4f73-9f67-3dfe315bdedc",
                             "device control aggregate document": {
                                 "device control document": [
                                     {
@@ -3203,7 +3203,7 @@
                     },
                     "measurement document": [
                         {
-                            "measurement identifier": "b2d6f21f-3484-44b4-8005-5091a38706e8",
+                            "measurement identifier": "f9730964-b462-49fe-9515-88b95635fbb3",
                             "device control aggregate document": {
                                 "device control document": [
                                     {
@@ -3253,7 +3253,7 @@
                             }
                         },
                         {
-                            "measurement identifier": "71dad330-80af-4f3e-a209-d6535dffbc87",
+                            "measurement identifier": "ff97d9e8-1dd9-4dc2-86c1-4895dde40545",
                             "device control aggregate document": {
                                 "device control document": [
                                     {
@@ -3317,7 +3317,7 @@
                     },
                     "measurement document": [
                         {
-                            "measurement identifier": "adde3b38-f20e-452a-81f7-36515c7b1e11",
+                            "measurement identifier": "510f243b-5153-4c8d-a5bc-d8ec94ee9e46",
                             "device control aggregate document": {
                                 "device control document": [
                                     {
@@ -3367,7 +3367,7 @@
                             }
                         },
                         {
-                            "measurement identifier": "778dec65-cc39-4dcc-a635-9156241b52b0",
+                            "measurement identifier": "b4d46218-f2ca-4ba9-bb2d-a843b5f1a53a",
                             "device control aggregate document": {
                                 "device control document": [
                                     {
@@ -3431,7 +3431,7 @@
                     },
                     "measurement document": [
                         {
-                            "measurement identifier": "2cb29920-6137-456a-ae80-e58060c59acc",
+                            "measurement identifier": "e45780d2-1ab2-4ffb-8ad2-3152abffff74",
                             "device control aggregate document": {
                                 "device control document": [
                                     {
@@ -3481,7 +3481,7 @@
                             }
                         },
                         {
-                            "measurement identifier": "6293df2f-5e30-4958-9293-b581e9b2c8b4",
+                            "measurement identifier": "9e7e480c-403c-45e0-a560-e8a809f90c19",
                             "device control aggregate document": {
                                 "device control document": [
                                     {
@@ -3545,7 +3545,7 @@
                     },
                     "measurement document": [
                         {
-                            "measurement identifier": "438fc175-b2d9-4fbc-92b6-a30eaa6e6457",
+                            "measurement identifier": "7ac2d7a1-075e-49ca-8294-22833ea071f1",
                             "device control aggregate document": {
                                 "device control document": [
                                     {
@@ -3595,7 +3595,7 @@
                             }
                         },
                         {
-                            "measurement identifier": "59434238-6192-434f-9a48-d1dae8997984",
+                            "measurement identifier": "e75d1b2d-74ac-4d29-874e-9ee676829acb",
                             "device control aggregate document": {
                                 "device control document": [
                                     {
@@ -3659,7 +3659,7 @@
                     },
                     "measurement document": [
                         {
-                            "measurement identifier": "aae52024-f0e0-4de1-95f7-b2d8501da2b8",
+                            "measurement identifier": "8b1f9492-e07a-49a0-aa5c-42402870c69e",
                             "device control aggregate document": {
                                 "device control document": [
                                     {
@@ -3709,7 +3709,7 @@
                             }
                         },
                         {
-                            "measurement identifier": "f758c93d-dc4d-4b60-adce-ada82114f9fe",
+                            "measurement identifier": "dc2b9e9b-e29e-48d9-8f4a-1e465f82650a",
                             "device control aggregate document": {
                                 "device control document": [
                                     {
@@ -3773,7 +3773,7 @@
                     },
                     "measurement document": [
                         {
-                            "measurement identifier": "75f32a8d-53e4-43eb-9f84-be3e19543d2a",
+                            "measurement identifier": "fbf0d1bb-9087-480a-967f-7ed59c1770eb",
                             "device control aggregate document": {
                                 "device control document": [
                                     {
@@ -3823,7 +3823,7 @@
                             }
                         },
                         {
-                            "measurement identifier": "38084478-fa63-4c95-b7cd-7bb9dbe74ff5",
+                            "measurement identifier": "08d2e232-a5af-4491-8729-7cd8e6a0f8df",
                             "device control aggregate document": {
                                 "device control document": [
                                     {
@@ -3887,7 +3887,7 @@
                     },
                     "measurement document": [
                         {
-                            "measurement identifier": "005218d6-afe5-4a6c-91e0-b79ac7e03be0",
+                            "measurement identifier": "2c38fd42-b8f5-4927-9b0b-ecc1b013746b",
                             "device control aggregate document": {
                                 "device control document": [
                                     {
@@ -3937,7 +3937,7 @@
                             }
                         },
                         {
-                            "measurement identifier": "d282ed97-273f-45d5-bbbd-ab7afe8a7903",
+                            "measurement identifier": "3fd9458a-c9d0-42d4-87b8-739456186ab4",
                             "device control aggregate document": {
                                 "device control document": [
                                     {
@@ -4001,7 +4001,7 @@
                     },
                     "measurement document": [
                         {
-                            "measurement identifier": "6fa4732d-3f84-48cd-92d8-64a8d2299d8c",
+                            "measurement identifier": "f1deb86b-82e2-4428-875b-fa0580d6bf73",
                             "device control aggregate document": {
                                 "device control document": [
                                     {
@@ -4051,7 +4051,7 @@
                             }
                         },
                         {
-                            "measurement identifier": "5a992420-090b-4c86-ad2b-3a3c55864669",
+                            "measurement identifier": "18d441e9-d2e5-48cf-ba79-1c7e655d8a3b",
                             "device control aggregate document": {
                                 "device control document": [
                                     {
@@ -4115,7 +4115,7 @@
                     },
                     "measurement document": [
                         {
-                            "measurement identifier": "c1c803a1-2340-4c0e-adf6-c63a4b62e2c0",
+                            "measurement identifier": "79863333-a60d-46b4-90ac-1342a2629e82",
                             "device control aggregate document": {
                                 "device control document": [
                                     {
@@ -4165,7 +4165,7 @@
                             }
                         },
                         {
-                            "measurement identifier": "7c98b327-0212-4aed-aa4f-31b70743fb64",
+                            "measurement identifier": "ca458d66-6129-477d-9772-6d62f2990236",
                             "device control aggregate document": {
                                 "device control document": [
                                     {
@@ -4229,7 +4229,7 @@
                     },
                     "measurement document": [
                         {
-                            "measurement identifier": "26dffd1e-c0ba-43df-8e7a-d340b3930a56",
+                            "measurement identifier": "8762d7ad-712a-48f9-aea1-ec19d6b183c1",
                             "device control aggregate document": {
                                 "device control document": [
                                     {
@@ -4279,7 +4279,7 @@
                             }
                         },
                         {
-                            "measurement identifier": "40181742-4ee3-4dc6-8693-eb9120db1199",
+                            "measurement identifier": "b8773d2a-93f0-4d95-bf68-02298c2e8fcf",
                             "device control aggregate document": {
                                 "device control document": [
                                     {
@@ -4343,7 +4343,7 @@
                     },
                     "measurement document": [
                         {
-                            "measurement identifier": "ae4a1eff-6f48-4ca6-b189-6f9e1fbe73fa",
+                            "measurement identifier": "c1d5995d-fe02-47f5-be35-2ec65234ef95",
                             "device control aggregate document": {
                                 "device control document": [
                                     {
@@ -4393,7 +4393,7 @@
                             }
                         },
                         {
-                            "measurement identifier": "c1647ba8-664e-46f9-9e4a-cff7cf2086fc",
+                            "measurement identifier": "84d5faba-81d6-430d-8846-fab40866b004",
                             "device control aggregate document": {
                                 "device control document": [
                                     {
@@ -4457,7 +4457,7 @@
                     },
                     "measurement document": [
                         {
-                            "measurement identifier": "59ff8290-fb11-4d73-abf0-0d746bac5f1c",
+                            "measurement identifier": "f971b25c-186a-4c2d-b552-8ff3f8e9834b",
                             "device control aggregate document": {
                                 "device control document": [
                                     {
@@ -4507,7 +4507,7 @@
                             }
                         },
                         {
-                            "measurement identifier": "6192bf19-2da4-466f-a9d7-9d26a5fc3247",
+                            "measurement identifier": "67572103-52b0-4d9e-b656-094929afea22",
                             "device control aggregate document": {
                                 "device control document": [
                                     {
@@ -4571,7 +4571,7 @@
                     },
                     "measurement document": [
                         {
-                            "measurement identifier": "0415f069-e4ff-4c8e-aeca-828c36bfeff9",
+                            "measurement identifier": "8bf52d4f-1991-4328-a75f-5e5a2aaa548f",
                             "device control aggregate document": {
                                 "device control document": [
                                     {
@@ -4621,7 +4621,7 @@
                             }
                         },
                         {
-                            "measurement identifier": "087f7dd3-f3ad-4076-bae9-4aab1d306eae",
+                            "measurement identifier": "b9abe095-7ef1-4e9f-b94c-756c2a1325de",
                             "device control aggregate document": {
                                 "device control document": [
                                     {
@@ -4685,7 +4685,7 @@
                     },
                     "measurement document": [
                         {
-                            "measurement identifier": "549edb42-ddf4-436d-a72d-0822d49be246",
+                            "measurement identifier": "dc015d20-781b-4ce0-9f5b-da6ea9dff368",
                             "device control aggregate document": {
                                 "device control document": [
                                     {
@@ -4735,7 +4735,7 @@
                             }
                         },
                         {
-                            "measurement identifier": "1f3a182a-8755-4a4d-828a-3debe3d56c95",
+                            "measurement identifier": "a36838ad-5ec3-4040-b657-efd62e727e5c",
                             "device control aggregate document": {
                                 "device control document": [
                                     {
@@ -4799,7 +4799,7 @@
                     },
                     "measurement document": [
                         {
-                            "measurement identifier": "a92b86a8-0913-42f6-ad19-097551421f0d",
+                            "measurement identifier": "1006b81a-70a1-4d51-9dc0-3c3d5bd82f7d",
                             "device control aggregate document": {
                                 "device control document": [
                                     {
@@ -4849,7 +4849,7 @@
                             }
                         },
                         {
-                            "measurement identifier": "2fb9f293-bee3-49c5-8d10-629282ca484a",
+                            "measurement identifier": "9a7ce836-bdf1-4875-a42e-019f1d85da29",
                             "device control aggregate document": {
                                 "device control document": [
                                     {
@@ -4913,7 +4913,7 @@
                     },
                     "measurement document": [
                         {
-                            "measurement identifier": "c064627f-b849-41fb-98bb-312a3694325e",
+                            "measurement identifier": "8a9a4b03-0ff6-4c82-aadc-c9c253c65153",
                             "device control aggregate document": {
                                 "device control document": [
                                     {
@@ -4963,7 +4963,7 @@
                             }
                         },
                         {
-                            "measurement identifier": "7199f9e5-0c6e-44b5-ac32-b5ece6eda546",
+                            "measurement identifier": "7ed210ca-6db2-49a2-89d7-e9c10be3f5da",
                             "device control aggregate document": {
                                 "device control document": [
                                     {
@@ -5027,7 +5027,7 @@
                     },
                     "measurement document": [
                         {
-                            "measurement identifier": "9147be02-2f4d-4a14-ba80-acffd05f6eec",
+                            "measurement identifier": "3a516e3e-3703-4845-a041-25aca46eb625",
                             "device control aggregate document": {
                                 "device control document": [
                                     {
@@ -5077,7 +5077,7 @@
                             }
                         },
                         {
-                            "measurement identifier": "89a2b092-c0ae-450d-9a52-78bd522f54bc",
+                            "measurement identifier": "2fda152d-21e5-40ec-8bad-83c7c94735bb",
                             "device control aggregate document": {
                                 "device control document": [
                                     {
@@ -5141,7 +5141,7 @@
                     },
                     "measurement document": [
                         {
-                            "measurement identifier": "462ff62b-8e94-4800-b6fc-33e59c659d76",
+                            "measurement identifier": "ad45a041-1e19-4849-9cb3-a8ad936ba74d",
                             "device control aggregate document": {
                                 "device control document": [
                                     {
@@ -5191,7 +5191,7 @@
                             }
                         },
                         {
-                            "measurement identifier": "cbf13ae3-e148-490a-a35c-cf78f2a6ae40",
+                            "measurement identifier": "64429068-df30-4668-bdfc-e2c009745aa9",
                             "device control aggregate document": {
                                 "device control document": [
                                     {
@@ -5255,7 +5255,7 @@
                     },
                     "measurement document": [
                         {
-                            "measurement identifier": "4fac374f-cee8-486f-a177-9d743288569b",
+                            "measurement identifier": "efd848e2-07bc-4b3f-bcb7-7552b35296fd",
                             "device control aggregate document": {
                                 "device control document": [
                                     {
@@ -5305,7 +5305,7 @@
                             }
                         },
                         {
-                            "measurement identifier": "29c625d1-cbb1-48c4-a3d9-9847c2610a90",
+                            "measurement identifier": "43ae9803-516b-48be-910e-10f707e4d1c6",
                             "device control aggregate document": {
                                 "device control document": [
                                     {
@@ -5369,7 +5369,7 @@
                     },
                     "measurement document": [
                         {
-                            "measurement identifier": "43814dea-077d-4627-9d3c-8abf6ab92add",
+                            "measurement identifier": "2a43f1db-8d32-495c-8021-db13417c4520",
                             "device control aggregate document": {
                                 "device control document": [
                                     {
@@ -5419,7 +5419,7 @@
                             }
                         },
                         {
-                            "measurement identifier": "69b5f907-b70c-48cd-ae42-f087566da89a",
+                            "measurement identifier": "c4f65ce5-f03d-4e5c-a225-c30cb18d9f12",
                             "device control aggregate document": {
                                 "device control document": [
                                     {
@@ -5478,6 +5478,1018 @@
         "device system document": {
             "device identifier": "EnVision",
             "model number": "1050209"
+        },
+        "calculated data aggregate document": {
+            "calculated data document": [
+                {
+                    "calculated data name": "(X / Y) * Z where X = AC HTRF Laser [Eu](1) channel 1 window 1  Y = AC HTRF Laser [Eu](1) channel 2 window 1  Z = 10000",
+                    "calculated result": {
+                        "value": 3912.12920565,
+                        "unit": "unitless"
+                    },
+                    "data source aggregate document": {
+                        "data source document": [
+                            {
+                                "data source identifier": "51c18b00-2537-4191-98cc-497a6e277b45",
+                                "data source feature": ""
+                            },
+                            {
+                                "data source identifier": "c0ba072e-4b59-4cda-a10e-23743ee8806b",
+                                "data source feature": ""
+                            }
+                        ]
+                    },
+                    "calculated data identifier": "c07185fb-1ccf-4913-b458-b9bfba9aef76",
+                    "calculation description": "Calc 1: General = (X / Y) * Z where X = AC HTRF Laser [Eu](1) channel 1 window 1  Y = AC HTRF Laser [Eu](1) channel 2 window 1  Z = 10000"
+                },
+                {
+                    "calculated data name": "(X / Y) * Z where X = AC HTRF Laser [Eu](1) channel 1 window 1  Y = AC HTRF Laser [Eu](1) channel 2 window 1  Z = 10000",
+                    "calculated result": {
+                        "value": 3923.92517971,
+                        "unit": "unitless"
+                    },
+                    "data source aggregate document": {
+                        "data source document": [
+                            {
+                                "data source identifier": "5de33fa9-4254-4d46-8907-717d417b6b75",
+                                "data source feature": ""
+                            },
+                            {
+                                "data source identifier": "e59e0077-9f71-4faa-a2ba-3169f7f72d76",
+                                "data source feature": ""
+                            }
+                        ]
+                    },
+                    "calculated data identifier": "c5d81b97-e1e2-44c1-a3c6-170cd62c4810",
+                    "calculation description": "Calc 1: General = (X / Y) * Z where X = AC HTRF Laser [Eu](1) channel 1 window 1  Y = AC HTRF Laser [Eu](1) channel 2 window 1  Z = 10000"
+                },
+                {
+                    "calculated data name": "(X / Y) * Z where X = AC HTRF Laser [Eu](1) channel 1 window 1  Y = AC HTRF Laser [Eu](1) channel 2 window 1  Z = 10000",
+                    "calculated result": {
+                        "value": 3948.45245355,
+                        "unit": "unitless"
+                    },
+                    "data source aggregate document": {
+                        "data source document": [
+                            {
+                                "data source identifier": "1c2f8112-87c0-4702-84ed-e42982cfe2fa",
+                                "data source feature": ""
+                            },
+                            {
+                                "data source identifier": "012f1ba1-68f0-4471-8b98-f594700959da",
+                                "data source feature": ""
+                            }
+                        ]
+                    },
+                    "calculated data identifier": "590a00ff-a3af-4cfa-8320-28961dc2b847",
+                    "calculation description": "Calc 1: General = (X / Y) * Z where X = AC HTRF Laser [Eu](1) channel 1 window 1  Y = AC HTRF Laser [Eu](1) channel 2 window 1  Z = 10000"
+                },
+                {
+                    "calculated data name": "(X / Y) * Z where X = AC HTRF Laser [Eu](1) channel 1 window 1  Y = AC HTRF Laser [Eu](1) channel 2 window 1  Z = 10000",
+                    "calculated result": {
+                        "value": 3933.03506298,
+                        "unit": "unitless"
+                    },
+                    "data source aggregate document": {
+                        "data source document": [
+                            {
+                                "data source identifier": "2985b45a-cb64-4178-ad16-b5c731fc9b98",
+                                "data source feature": ""
+                            },
+                            {
+                                "data source identifier": "f68b7a82-bde1-4dab-9a78-d72fd6c66d34",
+                                "data source feature": ""
+                            }
+                        ]
+                    },
+                    "calculated data identifier": "a9412690-418e-4a20-b7c4-a1d3bb0b33bb",
+                    "calculation description": "Calc 1: General = (X / Y) * Z where X = AC HTRF Laser [Eu](1) channel 1 window 1  Y = AC HTRF Laser [Eu](1) channel 2 window 1  Z = 10000"
+                },
+                {
+                    "calculated data name": "(X / Y) * Z where X = AC HTRF Laser [Eu](1) channel 1 window 1  Y = AC HTRF Laser [Eu](1) channel 2 window 1  Z = 10000",
+                    "calculated result": {
+                        "value": 4061.92827247,
+                        "unit": "unitless"
+                    },
+                    "data source aggregate document": {
+                        "data source document": [
+                            {
+                                "data source identifier": "809dab22-9497-443a-9dca-be76a8c8b88e",
+                                "data source feature": ""
+                            },
+                            {
+                                "data source identifier": "c55a929f-00c9-4af7-9091-d56922e46f26",
+                                "data source feature": ""
+                            }
+                        ]
+                    },
+                    "calculated data identifier": "d8848186-b59e-4931-990f-fe95bfd224ef",
+                    "calculation description": "Calc 1: General = (X / Y) * Z where X = AC HTRF Laser [Eu](1) channel 1 window 1  Y = AC HTRF Laser [Eu](1) channel 2 window 1  Z = 10000"
+                },
+                {
+                    "calculated data name": "(X / Y) * Z where X = AC HTRF Laser [Eu](1) channel 1 window 1  Y = AC HTRF Laser [Eu](1) channel 2 window 1  Z = 10000",
+                    "calculated result": {
+                        "value": 3996.61746992,
+                        "unit": "unitless"
+                    },
+                    "data source aggregate document": {
+                        "data source document": [
+                            {
+                                "data source identifier": "e7b6101e-b66e-41c2-b9c9-7ee08549912b",
+                                "data source feature": ""
+                            },
+                            {
+                                "data source identifier": "495bb9ad-e545-4e12-affc-98bb2bdd4b5c",
+                                "data source feature": ""
+                            }
+                        ]
+                    },
+                    "calculated data identifier": "df3a4d7e-6419-4b41-9609-1c8e0bfc55b2",
+                    "calculation description": "Calc 1: General = (X / Y) * Z where X = AC HTRF Laser [Eu](1) channel 1 window 1  Y = AC HTRF Laser [Eu](1) channel 2 window 1  Z = 10000"
+                },
+                {
+                    "calculated data name": "(X / Y) * Z where X = AC HTRF Laser [Eu](1) channel 1 window 1  Y = AC HTRF Laser [Eu](1) channel 2 window 1  Z = 10000",
+                    "calculated result": {
+                        "value": 2385.72193555,
+                        "unit": "unitless"
+                    },
+                    "data source aggregate document": {
+                        "data source document": [
+                            {
+                                "data source identifier": "1aa2b7ab-881c-49ee-a3cd-ec1aa772d664",
+                                "data source feature": ""
+                            },
+                            {
+                                "data source identifier": "ea342d6a-87d1-4796-8519-697b0c9592cf",
+                                "data source feature": ""
+                            }
+                        ]
+                    },
+                    "calculated data identifier": "acbb0b6c-9b10-44ef-a6c8-46df0d561a7c",
+                    "calculation description": "Calc 1: General = (X / Y) * Z where X = AC HTRF Laser [Eu](1) channel 1 window 1  Y = AC HTRF Laser [Eu](1) channel 2 window 1  Z = 10000"
+                },
+                {
+                    "calculated data name": "(X / Y) * Z where X = AC HTRF Laser [Eu](1) channel 1 window 1  Y = AC HTRF Laser [Eu](1) channel 2 window 1  Z = 10000",
+                    "calculated result": {
+                        "value": 2384.42487617,
+                        "unit": "unitless"
+                    },
+                    "data source aggregate document": {
+                        "data source document": [
+                            {
+                                "data source identifier": "1e4fd0fe-83e1-4df2-afd9-7125328ed055",
+                                "data source feature": ""
+                            },
+                            {
+                                "data source identifier": "3a44cf7f-c595-4a33-9b5c-089d546c036a",
+                                "data source feature": ""
+                            }
+                        ]
+                    },
+                    "calculated data identifier": "a3c9b7bf-277d-403f-9c6b-71b3ba8cca62",
+                    "calculation description": "Calc 1: General = (X / Y) * Z where X = AC HTRF Laser [Eu](1) channel 1 window 1  Y = AC HTRF Laser [Eu](1) channel 2 window 1  Z = 10000"
+                },
+                {
+                    "calculated data name": "(X / Y) * Z where X = AC HTRF Laser [Eu](1) channel 1 window 1  Y = AC HTRF Laser [Eu](1) channel 2 window 1  Z = 10000",
+                    "calculated result": {
+                        "value": 2396.10683014,
+                        "unit": "unitless"
+                    },
+                    "data source aggregate document": {
+                        "data source document": [
+                            {
+                                "data source identifier": "5d700af5-429f-4e2f-89b6-b72d41aca566",
+                                "data source feature": ""
+                            },
+                            {
+                                "data source identifier": "78a4ac8a-1ca8-4a5d-9f43-3c8fb884bbcf",
+                                "data source feature": ""
+                            }
+                        ]
+                    },
+                    "calculated data identifier": "2b49b353-f6c5-4c13-8f39-550a6c90ea0d",
+                    "calculation description": "Calc 1: General = (X / Y) * Z where X = AC HTRF Laser [Eu](1) channel 1 window 1  Y = AC HTRF Laser [Eu](1) channel 2 window 1  Z = 10000"
+                },
+                {
+                    "calculated data name": "(X / Y) * Z where X = AC HTRF Laser [Eu](1) channel 1 window 1  Y = AC HTRF Laser [Eu](1) channel 2 window 1  Z = 10000",
+                    "calculated result": {
+                        "value": 2390.61028269,
+                        "unit": "unitless"
+                    },
+                    "data source aggregate document": {
+                        "data source document": [
+                            {
+                                "data source identifier": "51b02eba-60dd-404f-96f9-04ddaaf139a7",
+                                "data source feature": ""
+                            },
+                            {
+                                "data source identifier": "a8001de2-f8b6-404f-8341-8c083a9421ee",
+                                "data source feature": ""
+                            }
+                        ]
+                    },
+                    "calculated data identifier": "3be63f15-d037-4388-bec2-4bb4a4e3149a",
+                    "calculation description": "Calc 1: General = (X / Y) * Z where X = AC HTRF Laser [Eu](1) channel 1 window 1  Y = AC HTRF Laser [Eu](1) channel 2 window 1  Z = 10000"
+                },
+                {
+                    "calculated data name": "(X / Y) * Z where X = AC HTRF Laser [Eu](1) channel 1 window 1  Y = AC HTRF Laser [Eu](1) channel 2 window 1  Z = 10000",
+                    "calculated result": {
+                        "value": 2396.68321027,
+                        "unit": "unitless"
+                    },
+                    "data source aggregate document": {
+                        "data source document": [
+                            {
+                                "data source identifier": "5d9aa139-c2fa-4172-b150-69bc13c10b23",
+                                "data source feature": ""
+                            },
+                            {
+                                "data source identifier": "3d08094c-196b-4a58-99c4-34c5564d6cfe",
+                                "data source feature": ""
+                            }
+                        ]
+                    },
+                    "calculated data identifier": "7ca850aa-4e81-4bed-8491-1d903e2118ae",
+                    "calculation description": "Calc 1: General = (X / Y) * Z where X = AC HTRF Laser [Eu](1) channel 1 window 1  Y = AC HTRF Laser [Eu](1) channel 2 window 1  Z = 10000"
+                },
+                {
+                    "calculated data name": "(X / Y) * Z where X = AC HTRF Laser [Eu](1) channel 1 window 1  Y = AC HTRF Laser [Eu](1) channel 2 window 1  Z = 10000",
+                    "calculated result": {
+                        "value": 2424.70697585,
+                        "unit": "unitless"
+                    },
+                    "data source aggregate document": {
+                        "data source document": [
+                            {
+                                "data source identifier": "297b1d70-63bf-4161-98c0-9be49bfb32f2",
+                                "data source feature": ""
+                            },
+                            {
+                                "data source identifier": "723704d8-b476-4b84-8de5-33fc729e582a",
+                                "data source feature": ""
+                            }
+                        ]
+                    },
+                    "calculated data identifier": "7939dd65-9e39-4272-a9d5-55c541da325c",
+                    "calculation description": "Calc 1: General = (X / Y) * Z where X = AC HTRF Laser [Eu](1) channel 1 window 1  Y = AC HTRF Laser [Eu](1) channel 2 window 1  Z = 10000"
+                },
+                {
+                    "calculated data name": "(X / Y) * Z where X = AC HTRF Laser [Eu](1) channel 1 window 1  Y = AC HTRF Laser [Eu](1) channel 2 window 1  Z = 10000",
+                    "calculated result": {
+                        "value": 1497.6939597,
+                        "unit": "unitless"
+                    },
+                    "data source aggregate document": {
+                        "data source document": [
+                            {
+                                "data source identifier": "e0b1f620-fca5-4f3b-ba2c-aba27007ab1d",
+                                "data source feature": ""
+                            },
+                            {
+                                "data source identifier": "aa0dfdca-df35-42d8-ad5b-a3eaf65c7e86",
+                                "data source feature": ""
+                            }
+                        ]
+                    },
+                    "calculated data identifier": "838b92af-a22c-484c-8ec8-6277ecd19214",
+                    "calculation description": "Calc 1: General = (X / Y) * Z where X = AC HTRF Laser [Eu](1) channel 1 window 1  Y = AC HTRF Laser [Eu](1) channel 2 window 1  Z = 10000"
+                },
+                {
+                    "calculated data name": "(X / Y) * Z where X = AC HTRF Laser [Eu](1) channel 1 window 1  Y = AC HTRF Laser [Eu](1) channel 2 window 1  Z = 10000",
+                    "calculated result": {
+                        "value": 1488.29789767,
+                        "unit": "unitless"
+                    },
+                    "data source aggregate document": {
+                        "data source document": [
+                            {
+                                "data source identifier": "9c801bf9-42a3-4f15-b737-9f551d7bb07b",
+                                "data source feature": ""
+                            },
+                            {
+                                "data source identifier": "1d79aba6-ff61-4ba3-b0e9-67b24d61e2c8",
+                                "data source feature": ""
+                            }
+                        ]
+                    },
+                    "calculated data identifier": "3e9b2c4f-f0f2-4423-a32a-21671ba2431c",
+                    "calculation description": "Calc 1: General = (X / Y) * Z where X = AC HTRF Laser [Eu](1) channel 1 window 1  Y = AC HTRF Laser [Eu](1) channel 2 window 1  Z = 10000"
+                },
+                {
+                    "calculated data name": "(X / Y) * Z where X = AC HTRF Laser [Eu](1) channel 1 window 1  Y = AC HTRF Laser [Eu](1) channel 2 window 1  Z = 10000",
+                    "calculated result": {
+                        "value": 1474.23429335,
+                        "unit": "unitless"
+                    },
+                    "data source aggregate document": {
+                        "data source document": [
+                            {
+                                "data source identifier": "77fbdade-f336-472d-9a07-a1c0063af421",
+                                "data source feature": ""
+                            },
+                            {
+                                "data source identifier": "bff5d5af-c0e6-4bc6-9a7d-500f4cb6608f",
+                                "data source feature": ""
+                            }
+                        ]
+                    },
+                    "calculated data identifier": "6e200656-b0d5-4715-bb29-ff9be415a0cc",
+                    "calculation description": "Calc 1: General = (X / Y) * Z where X = AC HTRF Laser [Eu](1) channel 1 window 1  Y = AC HTRF Laser [Eu](1) channel 2 window 1  Z = 10000"
+                },
+                {
+                    "calculated data name": "(X / Y) * Z where X = AC HTRF Laser [Eu](1) channel 1 window 1  Y = AC HTRF Laser [Eu](1) channel 2 window 1  Z = 10000",
+                    "calculated result": {
+                        "value": 1513.01294815,
+                        "unit": "unitless"
+                    },
+                    "data source aggregate document": {
+                        "data source document": [
+                            {
+                                "data source identifier": "4bdbfbc4-93f8-4b29-9e39-d87220265e5d",
+                                "data source feature": ""
+                            },
+                            {
+                                "data source identifier": "eb5c58a0-fb27-43f0-b07e-b3f6db843810",
+                                "data source feature": ""
+                            }
+                        ]
+                    },
+                    "calculated data identifier": "d51ba070-4f79-4f62-a350-e2fc8a7abd34",
+                    "calculation description": "Calc 1: General = (X / Y) * Z where X = AC HTRF Laser [Eu](1) channel 1 window 1  Y = AC HTRF Laser [Eu](1) channel 2 window 1  Z = 10000"
+                },
+                {
+                    "calculated data name": "(X / Y) * Z where X = AC HTRF Laser [Eu](1) channel 1 window 1  Y = AC HTRF Laser [Eu](1) channel 2 window 1  Z = 10000",
+                    "calculated result": {
+                        "value": 1487.52148035,
+                        "unit": "unitless"
+                    },
+                    "data source aggregate document": {
+                        "data source document": [
+                            {
+                                "data source identifier": "a5014cd0-83bb-4e6a-afdb-8859332734c7",
+                                "data source feature": ""
+                            },
+                            {
+                                "data source identifier": "1acb3f0d-86a8-420c-8625-65ecfcb1d3f2",
+                                "data source feature": ""
+                            }
+                        ]
+                    },
+                    "calculated data identifier": "13167fba-1bbc-4630-95bf-7bd51942eb0e",
+                    "calculation description": "Calc 1: General = (X / Y) * Z where X = AC HTRF Laser [Eu](1) channel 1 window 1  Y = AC HTRF Laser [Eu](1) channel 2 window 1  Z = 10000"
+                },
+                {
+                    "calculated data name": "(X / Y) * Z where X = AC HTRF Laser [Eu](1) channel 1 window 1  Y = AC HTRF Laser [Eu](1) channel 2 window 1  Z = 10000",
+                    "calculated result": {
+                        "value": 1471.02712185,
+                        "unit": "unitless"
+                    },
+                    "data source aggregate document": {
+                        "data source document": [
+                            {
+                                "data source identifier": "5c3a2168-a33c-4969-a86f-55fd029829ab",
+                                "data source feature": ""
+                            },
+                            {
+                                "data source identifier": "67d87dc0-bda9-424e-98cb-9e0c47d991a9",
+                                "data source feature": ""
+                            }
+                        ]
+                    },
+                    "calculated data identifier": "6f08b64e-fc4f-43c7-9973-94000e124723",
+                    "calculation description": "Calc 1: General = (X / Y) * Z where X = AC HTRF Laser [Eu](1) channel 1 window 1  Y = AC HTRF Laser [Eu](1) channel 2 window 1  Z = 10000"
+                },
+                {
+                    "calculated data name": "(X / Y) * Z where X = AC HTRF Laser [Eu](1) channel 1 window 1  Y = AC HTRF Laser [Eu](1) channel 2 window 1  Z = 10000",
+                    "calculated result": {
+                        "value": 1004.96752006,
+                        "unit": "unitless"
+                    },
+                    "data source aggregate document": {
+                        "data source document": [
+                            {
+                                "data source identifier": "bf624c34-e71d-4cf5-84d0-4599bd73ca39",
+                                "data source feature": ""
+                            },
+                            {
+                                "data source identifier": "074e0511-25d6-41f6-ba26-91ae52c03b0c",
+                                "data source feature": ""
+                            }
+                        ]
+                    },
+                    "calculated data identifier": "2cabd308-06d5-4f78-9e79-876fde03179d",
+                    "calculation description": "Calc 1: General = (X / Y) * Z where X = AC HTRF Laser [Eu](1) channel 1 window 1  Y = AC HTRF Laser [Eu](1) channel 2 window 1  Z = 10000"
+                },
+                {
+                    "calculated data name": "(X / Y) * Z where X = AC HTRF Laser [Eu](1) channel 1 window 1  Y = AC HTRF Laser [Eu](1) channel 2 window 1  Z = 10000",
+                    "calculated result": {
+                        "value": 997.698002862,
+                        "unit": "unitless"
+                    },
+                    "data source aggregate document": {
+                        "data source document": [
+                            {
+                                "data source identifier": "4fc5b285-1db3-45bf-b7d4-dcbc0cdf48e1",
+                                "data source feature": ""
+                            },
+                            {
+                                "data source identifier": "271617f2-405a-49b3-9ee6-8b430a241e1f",
+                                "data source feature": ""
+                            }
+                        ]
+                    },
+                    "calculated data identifier": "9121e630-02ff-438e-b0e5-afa29a5af2b1",
+                    "calculation description": "Calc 1: General = (X / Y) * Z where X = AC HTRF Laser [Eu](1) channel 1 window 1  Y = AC HTRF Laser [Eu](1) channel 2 window 1  Z = 10000"
+                },
+                {
+                    "calculated data name": "(X / Y) * Z where X = AC HTRF Laser [Eu](1) channel 1 window 1  Y = AC HTRF Laser [Eu](1) channel 2 window 1  Z = 10000",
+                    "calculated result": {
+                        "value": 984.957281601,
+                        "unit": "unitless"
+                    },
+                    "data source aggregate document": {
+                        "data source document": [
+                            {
+                                "data source identifier": "0a0869ed-8ae9-4fd5-bbe0-e9003918294e",
+                                "data source feature": ""
+                            },
+                            {
+                                "data source identifier": "2aa6c855-c94b-43d7-be62-ae8879c4bdd1",
+                                "data source feature": ""
+                            }
+                        ]
+                    },
+                    "calculated data identifier": "361c4b8d-35f9-4804-96ba-a1d34ef0929e",
+                    "calculation description": "Calc 1: General = (X / Y) * Z where X = AC HTRF Laser [Eu](1) channel 1 window 1  Y = AC HTRF Laser [Eu](1) channel 2 window 1  Z = 10000"
+                },
+                {
+                    "calculated data name": "(X / Y) * Z where X = AC HTRF Laser [Eu](1) channel 1 window 1  Y = AC HTRF Laser [Eu](1) channel 2 window 1  Z = 10000",
+                    "calculated result": {
+                        "value": 1017.18554813,
+                        "unit": "unitless"
+                    },
+                    "data source aggregate document": {
+                        "data source document": [
+                            {
+                                "data source identifier": "a223b09e-3421-4c64-bbcb-234a3e3128ec",
+                                "data source feature": ""
+                            },
+                            {
+                                "data source identifier": "1d888511-8eb9-4066-9da7-ff9d1a8aee61",
+                                "data source feature": ""
+                            }
+                        ]
+                    },
+                    "calculated data identifier": "46fab83b-87cd-4f86-971b-97b459936e23",
+                    "calculation description": "Calc 1: General = (X / Y) * Z where X = AC HTRF Laser [Eu](1) channel 1 window 1  Y = AC HTRF Laser [Eu](1) channel 2 window 1  Z = 10000"
+                },
+                {
+                    "calculated data name": "(X / Y) * Z where X = AC HTRF Laser [Eu](1) channel 1 window 1  Y = AC HTRF Laser [Eu](1) channel 2 window 1  Z = 10000",
+                    "calculated result": {
+                        "value": 968.985790113,
+                        "unit": "unitless"
+                    },
+                    "data source aggregate document": {
+                        "data source document": [
+                            {
+                                "data source identifier": "f07b20c3-5543-4f18-bae5-a796e1dcf6ea",
+                                "data source feature": ""
+                            },
+                            {
+                                "data source identifier": "25347d18-7c64-4e38-a14c-d7bdb159bf93",
+                                "data source feature": ""
+                            }
+                        ]
+                    },
+                    "calculated data identifier": "7c6a5a91-c361-47ff-9adf-2bba2b368ffa",
+                    "calculation description": "Calc 1: General = (X / Y) * Z where X = AC HTRF Laser [Eu](1) channel 1 window 1  Y = AC HTRF Laser [Eu](1) channel 2 window 1  Z = 10000"
+                },
+                {
+                    "calculated data name": "(X / Y) * Z where X = AC HTRF Laser [Eu](1) channel 1 window 1  Y = AC HTRF Laser [Eu](1) channel 2 window 1  Z = 10000",
+                    "calculated result": {
+                        "value": 1005.07749543,
+                        "unit": "unitless"
+                    },
+                    "data source aggregate document": {
+                        "data source document": [
+                            {
+                                "data source identifier": "de1e4994-08b9-4528-9cc7-f7c267a8d755",
+                                "data source feature": ""
+                            },
+                            {
+                                "data source identifier": "6dbc036d-5505-4841-8dc7-2b06c3407862",
+                                "data source feature": ""
+                            }
+                        ]
+                    },
+                    "calculated data identifier": "446ebd27-0dab-4472-adc6-07d31b8fcc2f",
+                    "calculation description": "Calc 1: General = (X / Y) * Z where X = AC HTRF Laser [Eu](1) channel 1 window 1  Y = AC HTRF Laser [Eu](1) channel 2 window 1  Z = 10000"
+                },
+                {
+                    "calculated data name": "(X / Y) * Z where X = AC HTRF Laser [Eu](1) channel 1 window 1  Y = AC HTRF Laser [Eu](1) channel 2 window 1  Z = 10000",
+                    "calculated result": {
+                        "value": 707.203907204,
+                        "unit": "unitless"
+                    },
+                    "data source aggregate document": {
+                        "data source document": [
+                            {
+                                "data source identifier": "f7d5445c-8900-4273-8bdd-fa243801c235",
+                                "data source feature": ""
+                            },
+                            {
+                                "data source identifier": "c8b0759d-6061-45d5-9276-dc5b63866922",
+                                "data source feature": ""
+                            }
+                        ]
+                    },
+                    "calculated data identifier": "8ee1e1e9-c140-426a-9c04-07b9240689c8",
+                    "calculation description": "Calc 1: General = (X / Y) * Z where X = AC HTRF Laser [Eu](1) channel 1 window 1  Y = AC HTRF Laser [Eu](1) channel 2 window 1  Z = 10000"
+                },
+                {
+                    "calculated data name": "(X / Y) * Z where X = AC HTRF Laser [Eu](1) channel 1 window 1  Y = AC HTRF Laser [Eu](1) channel 2 window 1  Z = 10000",
+                    "calculated result": {
+                        "value": 697.464104756,
+                        "unit": "unitless"
+                    },
+                    "data source aggregate document": {
+                        "data source document": [
+                            {
+                                "data source identifier": "bf208e54-0adb-4b8f-9307-839b899daea6",
+                                "data source feature": ""
+                            },
+                            {
+                                "data source identifier": "591e4a13-ce14-4047-b215-44d2b4bde1c9",
+                                "data source feature": ""
+                            }
+                        ]
+                    },
+                    "calculated data identifier": "e32d807c-ea32-453f-a249-d4361ed4c5c0",
+                    "calculation description": "Calc 1: General = (X / Y) * Z where X = AC HTRF Laser [Eu](1) channel 1 window 1  Y = AC HTRF Laser [Eu](1) channel 2 window 1  Z = 10000"
+                },
+                {
+                    "calculated data name": "(X / Y) * Z where X = AC HTRF Laser [Eu](1) channel 1 window 1  Y = AC HTRF Laser [Eu](1) channel 2 window 1  Z = 10000",
+                    "calculated result": {
+                        "value": 703.487537674,
+                        "unit": "unitless"
+                    },
+                    "data source aggregate document": {
+                        "data source document": [
+                            {
+                                "data source identifier": "98931222-bda0-41b1-98c9-dff589ff5734",
+                                "data source feature": ""
+                            },
+                            {
+                                "data source identifier": "327b5b09-4042-4e2f-8a34-ace8fe08f7f6",
+                                "data source feature": ""
+                            }
+                        ]
+                    },
+                    "calculated data identifier": "e2ce26bb-9170-494b-ab2c-63fb343fdead",
+                    "calculation description": "Calc 1: General = (X / Y) * Z where X = AC HTRF Laser [Eu](1) channel 1 window 1  Y = AC HTRF Laser [Eu](1) channel 2 window 1  Z = 10000"
+                },
+                {
+                    "calculated data name": "(X / Y) * Z where X = AC HTRF Laser [Eu](1) channel 1 window 1  Y = AC HTRF Laser [Eu](1) channel 2 window 1  Z = 10000",
+                    "calculated result": {
+                        "value": 726.238246392,
+                        "unit": "unitless"
+                    },
+                    "data source aggregate document": {
+                        "data source document": [
+                            {
+                                "data source identifier": "88f11594-5437-4e9b-b7fd-e4ed63ea1317",
+                                "data source feature": ""
+                            },
+                            {
+                                "data source identifier": "0cd75f0e-677b-4f73-9f67-3dfe315bdedc",
+                                "data source feature": ""
+                            }
+                        ]
+                    },
+                    "calculated data identifier": "4177a20e-5538-456e-bcca-68d85142920e",
+                    "calculation description": "Calc 1: General = (X / Y) * Z where X = AC HTRF Laser [Eu](1) channel 1 window 1  Y = AC HTRF Laser [Eu](1) channel 2 window 1  Z = 10000"
+                },
+                {
+                    "calculated data name": "(X / Y) * Z where X = AC HTRF Laser [Eu](1) channel 1 window 1  Y = AC HTRF Laser [Eu](1) channel 2 window 1  Z = 10000",
+                    "calculated result": {
+                        "value": 701.399029629,
+                        "unit": "unitless"
+                    },
+                    "data source aggregate document": {
+                        "data source document": [
+                            {
+                                "data source identifier": "f9730964-b462-49fe-9515-88b95635fbb3",
+                                "data source feature": ""
+                            },
+                            {
+                                "data source identifier": "ff97d9e8-1dd9-4dc2-86c1-4895dde40545",
+                                "data source feature": ""
+                            }
+                        ]
+                    },
+                    "calculated data identifier": "7cfb0c58-3585-4585-a057-536abe159db2",
+                    "calculation description": "Calc 1: General = (X / Y) * Z where X = AC HTRF Laser [Eu](1) channel 1 window 1  Y = AC HTRF Laser [Eu](1) channel 2 window 1  Z = 10000"
+                },
+                {
+                    "calculated data name": "(X / Y) * Z where X = AC HTRF Laser [Eu](1) channel 1 window 1  Y = AC HTRF Laser [Eu](1) channel 2 window 1  Z = 10000",
+                    "calculated result": {
+                        "value": 721.275009761,
+                        "unit": "unitless"
+                    },
+                    "data source aggregate document": {
+                        "data source document": [
+                            {
+                                "data source identifier": "510f243b-5153-4c8d-a5bc-d8ec94ee9e46",
+                                "data source feature": ""
+                            },
+                            {
+                                "data source identifier": "b4d46218-f2ca-4ba9-bb2d-a843b5f1a53a",
+                                "data source feature": ""
+                            }
+                        ]
+                    },
+                    "calculated data identifier": "9de75629-29a2-4939-88e0-6d5799e5d48c",
+                    "calculation description": "Calc 1: General = (X / Y) * Z where X = AC HTRF Laser [Eu](1) channel 1 window 1  Y = AC HTRF Laser [Eu](1) channel 2 window 1  Z = 10000"
+                },
+                {
+                    "calculated data name": "(X / Y) * Z where X = AC HTRF Laser [Eu](1) channel 1 window 1  Y = AC HTRF Laser [Eu](1) channel 2 window 1  Z = 10000",
+                    "calculated result": {
+                        "value": 562.804988252,
+                        "unit": "unitless"
+                    },
+                    "data source aggregate document": {
+                        "data source document": [
+                            {
+                                "data source identifier": "e45780d2-1ab2-4ffb-8ad2-3152abffff74",
+                                "data source feature": ""
+                            },
+                            {
+                                "data source identifier": "9e7e480c-403c-45e0-a560-e8a809f90c19",
+                                "data source feature": ""
+                            }
+                        ]
+                    },
+                    "calculated data identifier": "d03b3069-f41c-4505-8233-a262caf6be73",
+                    "calculation description": "Calc 1: General = (X / Y) * Z where X = AC HTRF Laser [Eu](1) channel 1 window 1  Y = AC HTRF Laser [Eu](1) channel 2 window 1  Z = 10000"
+                },
+                {
+                    "calculated data name": "(X / Y) * Z where X = AC HTRF Laser [Eu](1) channel 1 window 1  Y = AC HTRF Laser [Eu](1) channel 2 window 1  Z = 10000",
+                    "calculated result": {
+                        "value": 557.881619938,
+                        "unit": "unitless"
+                    },
+                    "data source aggregate document": {
+                        "data source document": [
+                            {
+                                "data source identifier": "7ac2d7a1-075e-49ca-8294-22833ea071f1",
+                                "data source feature": ""
+                            },
+                            {
+                                "data source identifier": "e75d1b2d-74ac-4d29-874e-9ee676829acb",
+                                "data source feature": ""
+                            }
+                        ]
+                    },
+                    "calculated data identifier": "c9e2577a-7f7d-457c-bdaa-82fdafae0ab7",
+                    "calculation description": "Calc 1: General = (X / Y) * Z where X = AC HTRF Laser [Eu](1) channel 1 window 1  Y = AC HTRF Laser [Eu](1) channel 2 window 1  Z = 10000"
+                },
+                {
+                    "calculated data name": "(X / Y) * Z where X = AC HTRF Laser [Eu](1) channel 1 window 1  Y = AC HTRF Laser [Eu](1) channel 2 window 1  Z = 10000",
+                    "calculated result": {
+                        "value": 559.664129137,
+                        "unit": "unitless"
+                    },
+                    "data source aggregate document": {
+                        "data source document": [
+                            {
+                                "data source identifier": "8b1f9492-e07a-49a0-aa5c-42402870c69e",
+                                "data source feature": ""
+                            },
+                            {
+                                "data source identifier": "dc2b9e9b-e29e-48d9-8f4a-1e465f82650a",
+                                "data source feature": ""
+                            }
+                        ]
+                    },
+                    "calculated data identifier": "d574725d-aeae-4d60-b78c-405bf05236c4",
+                    "calculation description": "Calc 1: General = (X / Y) * Z where X = AC HTRF Laser [Eu](1) channel 1 window 1  Y = AC HTRF Laser [Eu](1) channel 2 window 1  Z = 10000"
+                },
+                {
+                    "calculated data name": "(X / Y) * Z where X = AC HTRF Laser [Eu](1) channel 1 window 1  Y = AC HTRF Laser [Eu](1) channel 2 window 1  Z = 10000",
+                    "calculated result": {
+                        "value": 573.562254074,
+                        "unit": "unitless"
+                    },
+                    "data source aggregate document": {
+                        "data source document": [
+                            {
+                                "data source identifier": "fbf0d1bb-9087-480a-967f-7ed59c1770eb",
+                                "data source feature": ""
+                            },
+                            {
+                                "data source identifier": "08d2e232-a5af-4491-8729-7cd8e6a0f8df",
+                                "data source feature": ""
+                            }
+                        ]
+                    },
+                    "calculated data identifier": "48769ee4-f797-4114-892f-407b5cde92b8",
+                    "calculation description": "Calc 1: General = (X / Y) * Z where X = AC HTRF Laser [Eu](1) channel 1 window 1  Y = AC HTRF Laser [Eu](1) channel 2 window 1  Z = 10000"
+                },
+                {
+                    "calculated data name": "(X / Y) * Z where X = AC HTRF Laser [Eu](1) channel 1 window 1  Y = AC HTRF Laser [Eu](1) channel 2 window 1  Z = 10000",
+                    "calculated result": {
+                        "value": 567.634735212,
+                        "unit": "unitless"
+                    },
+                    "data source aggregate document": {
+                        "data source document": [
+                            {
+                                "data source identifier": "2c38fd42-b8f5-4927-9b0b-ecc1b013746b",
+                                "data source feature": ""
+                            },
+                            {
+                                "data source identifier": "3fd9458a-c9d0-42d4-87b8-739456186ab4",
+                                "data source feature": ""
+                            }
+                        ]
+                    },
+                    "calculated data identifier": "a3638888-80a7-498f-b520-f50e71e6d649",
+                    "calculation description": "Calc 1: General = (X / Y) * Z where X = AC HTRF Laser [Eu](1) channel 1 window 1  Y = AC HTRF Laser [Eu](1) channel 2 window 1  Z = 10000"
+                },
+                {
+                    "calculated data name": "(X / Y) * Z where X = AC HTRF Laser [Eu](1) channel 1 window 1  Y = AC HTRF Laser [Eu](1) channel 2 window 1  Z = 10000",
+                    "calculated result": {
+                        "value": 563.983204482,
+                        "unit": "unitless"
+                    },
+                    "data source aggregate document": {
+                        "data source document": [
+                            {
+                                "data source identifier": "f1deb86b-82e2-4428-875b-fa0580d6bf73",
+                                "data source feature": ""
+                            },
+                            {
+                                "data source identifier": "18d441e9-d2e5-48cf-ba79-1c7e655d8a3b",
+                                "data source feature": ""
+                            }
+                        ]
+                    },
+                    "calculated data identifier": "94f32a4c-04ce-4b72-b994-b2a859074f4d",
+                    "calculation description": "Calc 1: General = (X / Y) * Z where X = AC HTRF Laser [Eu](1) channel 1 window 1  Y = AC HTRF Laser [Eu](1) channel 2 window 1  Z = 10000"
+                },
+                {
+                    "calculated data name": "(X / Y) * Z where X = AC HTRF Laser [Eu](1) channel 1 window 1  Y = AC HTRF Laser [Eu](1) channel 2 window 1  Z = 10000",
+                    "calculated result": {
+                        "value": 481.189418042,
+                        "unit": "unitless"
+                    },
+                    "data source aggregate document": {
+                        "data source document": [
+                            {
+                                "data source identifier": "79863333-a60d-46b4-90ac-1342a2629e82",
+                                "data source feature": ""
+                            },
+                            {
+                                "data source identifier": "ca458d66-6129-477d-9772-6d62f2990236",
+                                "data source feature": ""
+                            }
+                        ]
+                    },
+                    "calculated data identifier": "99fc81f5-3bcb-471e-875e-d82c94f58415",
+                    "calculation description": "Calc 1: General = (X / Y) * Z where X = AC HTRF Laser [Eu](1) channel 1 window 1  Y = AC HTRF Laser [Eu](1) channel 2 window 1  Z = 10000"
+                },
+                {
+                    "calculated data name": "(X / Y) * Z where X = AC HTRF Laser [Eu](1) channel 1 window 1  Y = AC HTRF Laser [Eu](1) channel 2 window 1  Z = 10000",
+                    "calculated result": {
+                        "value": 482.180558541,
+                        "unit": "unitless"
+                    },
+                    "data source aggregate document": {
+                        "data source document": [
+                            {
+                                "data source identifier": "8762d7ad-712a-48f9-aea1-ec19d6b183c1",
+                                "data source feature": ""
+                            },
+                            {
+                                "data source identifier": "b8773d2a-93f0-4d95-bf68-02298c2e8fcf",
+                                "data source feature": ""
+                            }
+                        ]
+                    },
+                    "calculated data identifier": "04cd8d6e-eab3-448f-b01e-bf2dc1730fd0",
+                    "calculation description": "Calc 1: General = (X / Y) * Z where X = AC HTRF Laser [Eu](1) channel 1 window 1  Y = AC HTRF Laser [Eu](1) channel 2 window 1  Z = 10000"
+                },
+                {
+                    "calculated data name": "(X / Y) * Z where X = AC HTRF Laser [Eu](1) channel 1 window 1  Y = AC HTRF Laser [Eu](1) channel 2 window 1  Z = 10000",
+                    "calculated result": {
+                        "value": 480.169042819,
+                        "unit": "unitless"
+                    },
+                    "data source aggregate document": {
+                        "data source document": [
+                            {
+                                "data source identifier": "c1d5995d-fe02-47f5-be35-2ec65234ef95",
+                                "data source feature": ""
+                            },
+                            {
+                                "data source identifier": "84d5faba-81d6-430d-8846-fab40866b004",
+                                "data source feature": ""
+                            }
+                        ]
+                    },
+                    "calculated data identifier": "11f8a718-7990-46ba-9499-941c149aeac1",
+                    "calculation description": "Calc 1: General = (X / Y) * Z where X = AC HTRF Laser [Eu](1) channel 1 window 1  Y = AC HTRF Laser [Eu](1) channel 2 window 1  Z = 10000"
+                },
+                {
+                    "calculated data name": "(X / Y) * Z where X = AC HTRF Laser [Eu](1) channel 1 window 1  Y = AC HTRF Laser [Eu](1) channel 2 window 1  Z = 10000",
+                    "calculated result": {
+                        "value": 478.930200648,
+                        "unit": "unitless"
+                    },
+                    "data source aggregate document": {
+                        "data source document": [
+                            {
+                                "data source identifier": "f971b25c-186a-4c2d-b552-8ff3f8e9834b",
+                                "data source feature": ""
+                            },
+                            {
+                                "data source identifier": "67572103-52b0-4d9e-b656-094929afea22",
+                                "data source feature": ""
+                            }
+                        ]
+                    },
+                    "calculated data identifier": "3dc66e2d-6aa6-4e92-9013-7fe6d3688db6",
+                    "calculation description": "Calc 1: General = (X / Y) * Z where X = AC HTRF Laser [Eu](1) channel 1 window 1  Y = AC HTRF Laser [Eu](1) channel 2 window 1  Z = 10000"
+                },
+                {
+                    "calculated data name": "(X / Y) * Z where X = AC HTRF Laser [Eu](1) channel 1 window 1  Y = AC HTRF Laser [Eu](1) channel 2 window 1  Z = 10000",
+                    "calculated result": {
+                        "value": 482.450907876,
+                        "unit": "unitless"
+                    },
+                    "data source aggregate document": {
+                        "data source document": [
+                            {
+                                "data source identifier": "8bf52d4f-1991-4328-a75f-5e5a2aaa548f",
+                                "data source feature": ""
+                            },
+                            {
+                                "data source identifier": "b9abe095-7ef1-4e9f-b94c-756c2a1325de",
+                                "data source feature": ""
+                            }
+                        ]
+                    },
+                    "calculated data identifier": "9a1b66c5-8e0d-461f-9356-c5f94c9e87b2",
+                    "calculation description": "Calc 1: General = (X / Y) * Z where X = AC HTRF Laser [Eu](1) channel 1 window 1  Y = AC HTRF Laser [Eu](1) channel 2 window 1  Z = 10000"
+                },
+                {
+                    "calculated data name": "(X / Y) * Z where X = AC HTRF Laser [Eu](1) channel 1 window 1  Y = AC HTRF Laser [Eu](1) channel 2 window 1  Z = 10000",
+                    "calculated result": {
+                        "value": 491.042828331,
+                        "unit": "unitless"
+                    },
+                    "data source aggregate document": {
+                        "data source document": [
+                            {
+                                "data source identifier": "dc015d20-781b-4ce0-9f5b-da6ea9dff368",
+                                "data source feature": ""
+                            },
+                            {
+                                "data source identifier": "a36838ad-5ec3-4040-b657-efd62e727e5c",
+                                "data source feature": ""
+                            }
+                        ]
+                    },
+                    "calculated data identifier": "206484a2-1dbb-485c-8315-fc5cbca15bb4",
+                    "calculation description": "Calc 1: General = (X / Y) * Z where X = AC HTRF Laser [Eu](1) channel 1 window 1  Y = AC HTRF Laser [Eu](1) channel 2 window 1  Z = 10000"
+                },
+                {
+                    "calculated data name": "(X / Y) * Z where X = AC HTRF Laser [Eu](1) channel 1 window 1  Y = AC HTRF Laser [Eu](1) channel 2 window 1  Z = 10000",
+                    "calculated result": {
+                        "value": 403.155127082,
+                        "unit": "unitless"
+                    },
+                    "data source aggregate document": {
+                        "data source document": [
+                            {
+                                "data source identifier": "1006b81a-70a1-4d51-9dc0-3c3d5bd82f7d",
+                                "data source feature": ""
+                            },
+                            {
+                                "data source identifier": "9a7ce836-bdf1-4875-a42e-019f1d85da29",
+                                "data source feature": ""
+                            }
+                        ]
+                    },
+                    "calculated data identifier": "f8d03c60-76c7-4e7a-9f0d-7affd03a792e",
+                    "calculation description": "Calc 1: General = (X / Y) * Z where X = AC HTRF Laser [Eu](1) channel 1 window 1  Y = AC HTRF Laser [Eu](1) channel 2 window 1  Z = 10000"
+                },
+                {
+                    "calculated data name": "(X / Y) * Z where X = AC HTRF Laser [Eu](1) channel 1 window 1  Y = AC HTRF Laser [Eu](1) channel 2 window 1  Z = 10000",
+                    "calculated result": {
+                        "value": 414.191684058,
+                        "unit": "unitless"
+                    },
+                    "data source aggregate document": {
+                        "data source document": [
+                            {
+                                "data source identifier": "8a9a4b03-0ff6-4c82-aadc-c9c253c65153",
+                                "data source feature": ""
+                            },
+                            {
+                                "data source identifier": "7ed210ca-6db2-49a2-89d7-e9c10be3f5da",
+                                "data source feature": ""
+                            }
+                        ]
+                    },
+                    "calculated data identifier": "1ae3b2b9-bb2c-4e36-a92f-84c0a52a56a5",
+                    "calculation description": "Calc 1: General = (X / Y) * Z where X = AC HTRF Laser [Eu](1) channel 1 window 1  Y = AC HTRF Laser [Eu](1) channel 2 window 1  Z = 10000"
+                },
+                {
+                    "calculated data name": "(X / Y) * Z where X = AC HTRF Laser [Eu](1) channel 1 window 1  Y = AC HTRF Laser [Eu](1) channel 2 window 1  Z = 10000",
+                    "calculated result": {
+                        "value": 399.233942251,
+                        "unit": "unitless"
+                    },
+                    "data source aggregate document": {
+                        "data source document": [
+                            {
+                                "data source identifier": "3a516e3e-3703-4845-a041-25aca46eb625",
+                                "data source feature": ""
+                            },
+                            {
+                                "data source identifier": "2fda152d-21e5-40ec-8bad-83c7c94735bb",
+                                "data source feature": ""
+                            }
+                        ]
+                    },
+                    "calculated data identifier": "8d92a44e-eeb8-4611-a910-c6b1b7454052",
+                    "calculation description": "Calc 1: General = (X / Y) * Z where X = AC HTRF Laser [Eu](1) channel 1 window 1  Y = AC HTRF Laser [Eu](1) channel 2 window 1  Z = 10000"
+                },
+                {
+                    "calculated data name": "(X / Y) * Z where X = AC HTRF Laser [Eu](1) channel 1 window 1  Y = AC HTRF Laser [Eu](1) channel 2 window 1  Z = 10000",
+                    "calculated result": {
+                        "value": 403.302222012,
+                        "unit": "unitless"
+                    },
+                    "data source aggregate document": {
+                        "data source document": [
+                            {
+                                "data source identifier": "ad45a041-1e19-4849-9cb3-a8ad936ba74d",
+                                "data source feature": ""
+                            },
+                            {
+                                "data source identifier": "64429068-df30-4668-bdfc-e2c009745aa9",
+                                "data source feature": ""
+                            }
+                        ]
+                    },
+                    "calculated data identifier": "e59eb140-5969-48fb-b1b7-1340e7923548",
+                    "calculation description": "Calc 1: General = (X / Y) * Z where X = AC HTRF Laser [Eu](1) channel 1 window 1  Y = AC HTRF Laser [Eu](1) channel 2 window 1  Z = 10000"
+                },
+                {
+                    "calculated data name": "(X / Y) * Z where X = AC HTRF Laser [Eu](1) channel 1 window 1  Y = AC HTRF Laser [Eu](1) channel 2 window 1  Z = 10000",
+                    "calculated result": {
+                        "value": 406.559451108,
+                        "unit": "unitless"
+                    },
+                    "data source aggregate document": {
+                        "data source document": [
+                            {
+                                "data source identifier": "efd848e2-07bc-4b3f-bcb7-7552b35296fd",
+                                "data source feature": ""
+                            },
+                            {
+                                "data source identifier": "43ae9803-516b-48be-910e-10f707e4d1c6",
+                                "data source feature": ""
+                            }
+                        ]
+                    },
+                    "calculated data identifier": "742f5b01-5f53-447c-b3e8-7e0e2dee4be6",
+                    "calculation description": "Calc 1: General = (X / Y) * Z where X = AC HTRF Laser [Eu](1) channel 1 window 1  Y = AC HTRF Laser [Eu](1) channel 2 window 1  Z = 10000"
+                },
+                {
+                    "calculated data name": "(X / Y) * Z where X = AC HTRF Laser [Eu](1) channel 1 window 1  Y = AC HTRF Laser [Eu](1) channel 2 window 1  Z = 10000",
+                    "calculated result": {
+                        "value": 409.025761641,
+                        "unit": "unitless"
+                    },
+                    "data source aggregate document": {
+                        "data source document": [
+                            {
+                                "data source identifier": "2a43f1db-8d32-495c-8021-db13417c4520",
+                                "data source feature": ""
+                            },
+                            {
+                                "data source identifier": "c4f65ce5-f03d-4e5c-a225-c30cb18d9f12",
+                                "data source feature": ""
+                            }
+                        ]
+                    },
+                    "calculated data identifier": "fcb9e2c6-a577-4b02-920e-d96f298ed8f4",
+                    "calculation description": "Calc 1: General = (X / Y) * Z where X = AC HTRF Laser [Eu](1) channel 1 window 1  Y = AC HTRF Laser [Eu](1) channel 2 window 1  Z = 10000"
+                }
+            ]
         }
     }
 }

@@ -382,7 +382,9 @@ class PerkinElmerEnvisionParser(VendorParser):
                     )
                 )
 
-        CalculatedDataAggregateDocument(
+        if not calculated_documents:
+            return None
+
+        return CalculatedDataAggregateDocument(
             calculated_data_document=calculated_documents,
         )
-        return None
