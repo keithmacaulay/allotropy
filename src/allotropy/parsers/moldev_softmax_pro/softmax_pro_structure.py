@@ -110,10 +110,10 @@ class Block:
         }
 
         for key, cls in block_cls_by_type.items():
-            if lines_reader.lines[0].startswith(key):
+            if lines_reader.match(f"^{key}"):
                 return cls.create(lines_reader)
 
-        error = f"unrecognized block {lines_reader.lines[0]}"
+        error = f"unrecognized block {lines_reader.get()}"
         raise AllotropeConversionError(error)
 
 
