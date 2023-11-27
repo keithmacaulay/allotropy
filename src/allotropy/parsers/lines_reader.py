@@ -136,6 +136,10 @@ class CsvReader(LinesReader):
             self.drop_until_empty()
             self.drop_empty()
 
+    def pop_as_series(self, sep: str = " ") -> Optional[pd.Series]:
+        line = self.pop()
+        return None if line is None else pd.Series(line.split(sep))
+
 
 class ListCsvReader(CsvReader, ListReader):
     pass
