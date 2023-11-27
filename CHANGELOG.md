@@ -13,6 +13,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Update Benchman Vi-cell Blu adapter to use the new cell-counting BENCHLING/2023/11 schema
 - Update Benchman Vi-cell XR adapter to use the new cell-counting BENCHLING/2023/11 schema
 - Set mypy's disallow_any_generics to True. Ideally, new files should not suppress these warnings.
+- Simplify csv lines reader
 ### Deprecated
 ### Removed
 ### Security
