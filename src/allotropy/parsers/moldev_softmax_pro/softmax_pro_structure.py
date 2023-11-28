@@ -54,6 +54,7 @@ from allotropy.parsers.utils.values import (
     assert_not_none,
     natural_sort_key,
     PrimitiveValue,
+    try_float_or_none,
     try_int,
     try_int_or_none,
     value_or_none,
@@ -79,6 +80,11 @@ def get_well_coordinates(row_number: int, column_number: str) -> str:
         row_number, remainder = divmod(row_number - 1, 26)
         row_letters = chr(START_LETTER_CODE + remainder) + row_letters
     return row_letters + str(column_number)
+
+
+def num_to_chars(n: int) -> str:
+    d, m = divmod(n, 26)  # 26 is the number of ASCII letters
+    return "" if n < 0 else num_to_chars(d - 1) + chr(m + 65)  # chr(65) = 'A'
 
 
 class ReadType(Enum):
@@ -201,6 +207,128 @@ class PlateHeader:
     num_rows: int
     excitation_wavelengths: Optional[list[int]]
     cutoff_filters: Optional[list[int]]
+
+
+@dataclass
+class WavelengthElement:
+    row: str
+    col: str
+    value: str
+
+    @property
+    def pos(self) -> str:
+        return f"{self.row}{self.col}"
+
+
+@dataclass
+class WavelengthData:
+    wavelength_data: pd.DataFrame
+
+    @staticmethod
+    def create(data: pd.DataFrame) -> WavelengthData:
+        rows, _ = data.shape
+        data.index = pd.Index([num_to_chars(i) for i in range(rows)])
+        return WavelengthData(wavelength_data=data)
+
+    def iter_elements(self) -> Iterator[WavelengthElement]:
+        for letter, row in self.wavelength_data.iterrows():
+            for number, value in row.items():
+                yield WavelengthElement(
+                    row=str(letter),
+                    col=str(number),
+                    value=str(value),
+                )
+
+
+@dataclass
+class KineticData:
+    data_key: Optional[str]
+    temperature: Optional[float]
+    wavelength_data: list[WavelengthData]
+
+    @staticmethod
+    def create(
+        lines_reader: CsvReader,
+        header: PlateHeader,
+    ) -> KineticData:
+        columns = assert_not_none(
+            lines_reader.pop_as_series(sep="\t"),
+            msg="unable to get data columns for plate block",
+        )
+        data = assert_not_none(
+            lines_reader.pop_csv_block_as_df(sep="\t"),
+            msg="unable to get data from plate block",
+        )
+        data.columns = pd.Index(columns)
+
+        raw_data_key = data.iloc[0, 0]
+        raw_temperature = data.iloc[0, 1]
+
+        return KineticData(
+            data_key=str(raw_data_key) if raw_data_key else None,
+            temperature=try_float_or_none(str(raw_temperature)),
+            wavelength_data=list(
+                KineticData._iter_wavelength_data(header, data.iloc[:, 2:])
+            ),
+        )
+
+    @staticmethod
+    def _iter_wavelength_data(
+        header: PlateHeader, w_data: pd.DataFrame
+    ) -> Iterator[WavelengthData]:
+        for idx in range(header.num_wavelengths):
+            start = idx * (header.num_columns + 1)
+            end = start + header.num_columns
+            yield WavelengthData.create(w_data.iloc[:, start:end])
+
+
+@dataclass
+class RawData:
+    kinetic_data: list[KineticData]
+
+    @staticmethod
+    def create(
+        lines_reader: CsvReader,
+        header: PlateHeader,
+    ) -> RawData:
+        return RawData(
+            kinetic_data=[
+                KineticData.create(lines_reader, header)
+                for _ in range(header.kinetic_points)
+            ]
+        )
+
+
+@dataclass
+class ReducedData:
+    reduced_data: pd.DataFrame
+
+    @staticmethod
+    def create(
+        lines_reader: CsvReader,
+        header: PlateHeader,
+    ) -> ReducedData:
+        raw_data = assert_not_none(
+            lines_reader.pop_csv_block_as_df(sep="\t", header=0),
+            msg="Unable to get reduced data for plate block",
+        )
+        return ReducedData(reduced_data=raw_data.iloc[:, 2 : header.num_columns + 2])
+
+
+@dataclass
+class PlateData:
+    raw_data: RawData
+    reduced_data: ReducedData
+
+    @staticmethod
+    def create(
+        lines_reader: CsvReader,
+        header: PlateHeader,
+    ) -> PlateData:
+        return PlateData(
+            raw_data=RawData.create(lines_reader, header),
+            reduced_data=ReducedData.create(lines_reader, header),
+        )
 
 
 @dataclass
