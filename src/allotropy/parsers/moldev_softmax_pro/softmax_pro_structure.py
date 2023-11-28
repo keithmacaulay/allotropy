@@ -360,7 +360,6 @@ class PlateBlock(Block):
         ]
         data_header = split_lines[1]
         data_lines = split_lines[2:]
-        end_raw_data_index = 0
         if header.data_type == DataType.RAW.value:
             for read_index in range(header.kinetic_points):
                 start_index = read_index * (header.num_rows + 1)
@@ -401,9 +400,11 @@ class PlateBlock(Block):
                     reduced_data_rows,
                 )
         elif header.data_type == DataType.REDUCED.value:
-            reduced_data_rows = data_lines[end_raw_data_index:]
             PlateBlock._parse_reduced_plate_rows(
-                header.num_columns, data_header, well_data, reduced_data_rows
+                header.num_columns,
+                data_header,
+                well_data,
+                data_lines,
             )
         else:
             error = f"unrecognized data type {header.data_type}"
