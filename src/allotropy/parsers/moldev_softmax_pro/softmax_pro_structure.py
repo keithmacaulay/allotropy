@@ -347,7 +347,10 @@ class PlateBlock(Block):
         if header.export_format == ExportFormat.TIME_FORMAT.value:
             PlateBlock._parse_time_format_data(lines_reader, header, well_data)
         elif header.export_format == ExportFormat.PLATE_FORMAT.value:
-            PlateBlock._parse_plate_format_data(lines_reader, header, well_data)
+            plate_data = PlateData.create(lines_reader, header)
+            PlateBlock._parse_plate_format_data(
+                plate_data, lines_reader, header, well_data
+            )
         else:
             error = f"unrecognized export format {header.export_format}"
             raise AllotropeConversionError(error)
@@ -478,6 +481,7 @@ class PlateBlock(Block):
 
     @staticmethod
     def _parse_plate_format_data(
+        plate_data: PlateData,
         lines_reader: CsvReader,
         header: PlateHeader,
         well_data: defaultdict[str, WellData],
@@ -489,35 +493,18 @@ class PlateBlock(Block):
         data_header = split_lines[1]
         data_lines = split_lines[2:]
         if header.data_type == DataType.RAW.value:
-            for read_index in range(header.kinetic_points):
-                start_index = read_index * (header.num_rows + 1)
-                read_rows = data_lines[start_index : start_index + header.num_rows]
-                data_key = read_rows[0][0]
-                temperature = read_rows[0][1]
-                for i, row in enumerate(read_rows):
-                    wavelength_index = 0
-                    for wavelength_index in range(header.num_wavelengths):
-                        col_start_index = 2 + (
-                            wavelength_index * (header.num_columns + 1)
+            for kinetic_data in plate_data.raw_data.kinetic_data:
+                for idx, wavelength_data in enumerate(kinetic_data.wavelength_data):
+                    for wavelength_element in wavelength_data.iter_elements():
+                        PlateBlock._add_data_point(
+                            header,
+                            well_data,
+                            wavelength_element.pos,
+                            wavelength_element.value,
+                            data_key=kinetic_data.data_key,
+                            temperature=kinetic_data.temperature,
+                            wavelength_index=idx,
                         )
-                        for j, value in enumerate(
-                            row[col_start_index : col_start_index + header.num_columns]
-                        ):
-                            if value is None:
-                                continue
-                            col_number = assert_not_none(
-                                data_header[j + 2], "column number"
-                            )
-                            well = get_well_coordinates(i + 1, col_number)
-                            PlateBlock._add_data_point(
-                                header,
-                                well_data,
-                                well,
-                                value,
-                                data_key=data_key,
-                                temperature=temperature,
-                                wavelength_index=wavelength_index,
-                            )
             end_raw_data_index = ((header.num_rows + 1) * header.kinetic_points) + 1
             reduced_data_rows = data_lines[end_raw_data_index:]
             if len(reduced_data_rows) == header.num_rows:
