@@ -217,54 +217,58 @@ class PlateBlock(Block):
             msg="Unable to get plate block header",
         )
         header_series = raw_header_series.replace("", None).str.strip()
-        read_mode = header_series[5]
 
+        cls = PlateBlock.get_plate_block_cls(header_series)
+        header = cls.parse_header(header_series)
+
+        well_data: defaultdict[str, WellData] = defaultdict(WellData.create)
+
+        split_lines = [
+            [value_or_none(value) for value in raw_line.split("\t")]
+            for raw_line in lines_reader.lines
+        ]
+        data_header = split_lines[1]
+        data_lines = split_lines[2:]
+
+        if header.export_format == ExportFormat.TIME_FORMAT.value:
+            PlateBlock._parse_time_format_data(
+                header,
+                well_data,
+                data_header,
+                data_lines,
+            )
+        elif header.export_format == ExportFormat.PLATE_FORMAT.value:
+            PlateBlock._parse_plate_format_data(
+                header,
+                well_data,
+                data_header,
+                data_lines,
+            )
+        else:
+            error = f"unrecognized export format {header.export_format}"
+            raise AllotropeConversionError(error)
+
+        return cls(
+            block_type="Plate",
+            raw_lines=lines_reader.lines,
+            header=header,
+            well_data=well_data,
+            data_header=data_header,
+        )
+
+    @staticmethod
+    def get_plate_block_cls(header_series: pd.Series[str]) -> type[PlateBlock]:
         plate_block_cls: dict[str, type[PlateBlock]] = {
             "Absorbance": AbsorbancePlateBlock,
             "Fluorescence": FluorescencePlateBlock,
             "Luminescence": LuminescencePlateBlock,
         }
-
-        if cls := plate_block_cls.get(read_mode or ""):
-            header = cls.parse_header(header_series)
-
-            well_data: defaultdict[str, WellData] = defaultdict(WellData.create)
-
-            split_lines = [
-                [value_or_none(value) for value in raw_line.split("\t")]
-                for raw_line in lines_reader.lines
-            ]
-            data_header = split_lines[1]
-            data_lines = split_lines[2:]
-
-            if header.export_format == ExportFormat.TIME_FORMAT.value:
-                PlateBlock._parse_time_format_data(
-                    header,
-                    well_data,
-                    data_header,
-                    data_lines,
-                )
-            elif header.export_format == ExportFormat.PLATE_FORMAT.value:
-                PlateBlock._parse_plate_format_data(
-                    header,
-                    well_data,
-                    data_header,
-                    data_lines,
-                )
-            else:
-                error = f"unrecognized export format {header.export_format}"
-                raise AllotropeConversionError(error)
-
-            return cls(
-                block_type="Plate",
-                raw_lines=lines_reader.lines,
-                header=header,
-                well_data=well_data,
-                data_header=data_header,
-            )
-
-        error = f"unrecognized read mode {read_mode}"
-        raise AllotropeConversionError(error)
+        read_mode = header_series[5]
+        cls = plate_block_cls.get(read_mode or "")
+        if cls is None:
+            error = f"unrecognized read mode {read_mode}"
+            raise AllotropeConversionError(error)
+        return cls
 
     @staticmethod
     def _parse_reduced_plate_rows(
